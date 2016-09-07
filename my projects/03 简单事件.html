@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title> event </title>
+	</head>
+		
+	<script language = "Javascript">
+		function check() {
+			var name = document.myform.username.value;
+			if (name == "") {
+				alert("name is empty");
+				document.myform.showtext.value = "name is empty";
+			} else {
+				alert("welcome " + name + " here!")
+				document.myform.showtext.value = "welcome " + name + " here!";
+			}
+		}
+	</script>
+	
+	<body>
+	  <center>
+		<h2> simple event </h2>
+		<hr>
+	
+		<form name = "myform" id = "myform" action = "#" method = "get">
+			<b>input your name</b>
+			
+			<input type = "text" name = "username" id = "username" size = "20">
+			<br>
+			<br>
+			<b>computer:</b>
+			<input type = "text" name = "showtext" id = "showtext" size = "40">
+			<br>
+			<br>
+			<input type = "button" value = "summit" OnClick = "check()">
+			
+			
+		</form>
+	
+	
+		<script language = "Javascript">
+			
+			
+			
+		</script>
+	
+	  </center>
+	</body>
+</html>
