@@ -1,6 +1,8 @@
-
-body {
+/*background's img fixed*/
+body {	
+	background-color: white;
 	background:url(http://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/silverware.jpg) repeat;
+	background-attachment:fixed
 }
 
 h1 { 
@@ -50,6 +52,7 @@ a {
 	text-decoration: underline;
 }
 
+/*using img*/
 .ul1 {
 	list-style-image:url("http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/1/pie_icon.gif");
 	list-style-type: disc;
