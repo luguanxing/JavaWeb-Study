@@ -1,27 +1,30 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd";>
-<html>
+<html lang = "ch">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title> 兴兴计算器v1.0 </title>
 	</head>
 	
 	<style>
-		ul{
-			float:left;
-			position:relative;
-			left:50%;
+		h2, b, form{
+			text-align:center;
 		}
-		ul li{
+		
+		.mid {
+			width:180px;
+			height:120px;
+			margin-left:auto;
+			margin-right:auto;
+		}
+		.left {
 			float:left;
-			margin:15px;
-			padding:0;
-			position:relative;
-			right:65%;
-			line-height:25px;
-			border:solid 0px #000;
-			width:60px;
-			height:105px;
-			list-style:none;
+		}
+		.center {
+			float:left;
+			height:120px;
+		}		
+		.right {
+			float:left;
 		}
 	</style>
 	
@@ -53,7 +56,6 @@
 		</script>
 	
 	<body>
-	  <center>
 		<h2> 兴兴计算器v1.0 </h2>
 		<hr>
 	
@@ -61,33 +63,25 @@
 			<b>input two numbers</b>
 			<br>
 		
-			<ul>
-				<li>
-					<br>
-					<input type = "text" name = "num1" id = "num1" size = "5">
-				</li>
-	    	
-				<li>
-					<input type = "button" value = "  +  " OnClick = "jia()">
-					<input type = "button" value = "  -  " OnClick = "jian()">
-					<input type = "button" value = "  *  " OnClick = "cheng()">
-					<input type = "button" value = "  /  " OnClick = "chu()">
-				</li>
-			
-				<li>
-					<br>
-					<input type = "text" name = "num2" id = "num2" size = "5">
-				</li>
-			</ul>
-	
-			<br><br><br><br><br><br><br><br><br><br><br>
-			
-			<b>result</b>
-			<br>
-			<input type = "text" name = "num" id = "num" size = "8">
+		<div class = "mid">
+			<div class = "left">
+				<input type = "text" name = "num1" id = "num1" size = "5">
+			</div>
+			<div class = "center">
+				<input type = "button" value = "  +  " OnClick = "jia()"><br>
+				<input type = "button" value = "  -  " OnClick = "jian()"><br>
+				<input type = "button" value = "  *  " OnClick = "cheng()"><br>
+				<input type = "button" value = "  /  " OnClick = "chu()"><br>
+			</div>
+			<div class = "right">					
+				<input type = "text" name = "num2" id = "num2" size = "5">
+			</div>
+		</div>
+				
+		<b>result</b><br>
+		<input type = "text" name = "num" id = "num" size = "8">
 		</form>
 	
 	
-	  </center>
 	</body>
 </html>
