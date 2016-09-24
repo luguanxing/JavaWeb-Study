@@ -1,0 +1,141 @@
+* {
+	margin:0px;	
+	padding:0px;
+	list-style:none;
+	font-weight:bold;
+	font-family:Arial;
+	border-radius:50%;
+	-webkit-transition:all 0.5s linear;
+}
+
+#button {	/*i want to base it from button<div>*/
+	width:0;
+	height:0;
+	position:absolute;	
+	left:500px;
+	top:300px;
+}
+	#info-bar {		/*info-bar: start is invisible*/
+		width:0;
+		height:0;
+		opacity:0;		
+		overflow:hidden;
+		background-color:rgb(130, 130, 130);		
+		position:absolute;
+		left:30px;
+		top:30px;
+	}
+	#button:hover #info-bar{		/*info-bar: end is bigg*/
+		width:160px;
+		height:160px;
+		opacity:1;			
+		left:-35px;
+		top:-180px;		
+	}	
+		.info {
+			padding-top:15px;
+			text-align:center;
+			color:white;
+		}
+			.info li {
+				margin-bottom:10px;
+				padding-left:5px;
+			}
+				.page span{
+					padding-left:10px;
+				}
+				.mine span {
+					padding-left:5px;
+				}
+				.mine {
+					display:inline;
+				}
+				.user {
+					font-size:15pt;
+				}
+				.comment {
+					font-size:30pt;
+				}
+				.posted, .like{
+					font-size:20pt;
+					color:#079E6E;
+				}
+	#control-ring-container li {	 /*ring: start position(0,0) + invisible*/
+		width:60px;
+		height:60px;
+		background-color:gray;
+		background-position:center;
+		position:absolute;
+		opacity:0;
+		left:0;
+		top:0;		
+	}
+		.mask {
+			background:url("assets/images/mask.png") no-repeat;
+		}
+		.history {
+			background:url("assets/images/history.png") no-repeat;	
+		}
+		.message {
+			background:url("assets/images/message.png") no-repeat;	
+		}
+			.unread {
+				width:20px;
+				height:20px;
+				float:right;
+				color:white;
+				text-align:center;				
+				position:relative;
+				background-color:red;
+				font-family:Microsoft YaHei;
+			}
+		.setting {
+			background:url("assets/images/setting.png") no-repeat;
+		}
+		.sign {
+			background:url("assets/images/signin.png") no-repeat;
+		}	
+	#button:hover #control-ring-container li {		/*ring: end position(?,?) + visible*/
+		opacity:1;
+	}			
+		#button:hover .mask {
+			left:-70px;
+			top:-45px;			
+		}
+		#button:hover .history {
+			left:-90px;
+			top:25px;			
+		}
+		#button:hover .message {
+			left:-50px;
+			top:85px;				
+		}		
+		#button:hover .setting {
+			left:20px;
+			top:110px;			
+		}
+		#button:hover .sign {
+			left:85px;
+			top:75px;		
+		}
+	.apb {		/*center icon: start small*/
+		width:60px;
+		height:60px;	
+		background:url("assets/images/atplus_white.png") no-repeat;
+		background-color:#7171C6;
+		background-position:center;
+		position:absolute;
+		left:0;
+		top:0;
+	}	
+	#button:hover .apb {		/*center icon: end bigger*/
+		width:100px;
+		height:100px;
+		background-image:url("assets/images/atplus_green.png");
+		background-color:rgba(48, 63, 159, 1);
+		position:absolute;
+		left:-10px;
+		top:-10px;
+	}		
+		
+
