@@ -1,4 +1,4 @@
-* {
+* {	/*请用google浏览器chrome*/
 	margin:0px;	
 	padding:0px;
 	list-style:none;
@@ -8,7 +8,7 @@
 	-webkit-transition:all 0.5s linear;
 }
 
-#button {	/*i want to base it from button<div>*/
+#button {	/*begin from button<div>*/
 	width:0;
 	height:0;
 	position:absolute;	
@@ -124,6 +124,7 @@
 		background:url("assets/images/atplus_white.png") no-repeat;
 		background-color:#7171C6;
 		background-position:center;
+		-webkit-transition-delay:1s;
 		position:absolute;
 		left:0;
 		top:0;
@@ -133,9 +134,9 @@
 		height:100px;
 		background-image:url("assets/images/atplus_green.png");
 		background-color:rgba(48, 63, 159, 1);
+		-webkit-transition-delay:0.1s;
 		position:absolute;
 		left:-10px;
 		top:-10px;
 	}		
 		
-
