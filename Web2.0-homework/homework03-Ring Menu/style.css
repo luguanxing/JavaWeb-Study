@@ -12,8 +12,8 @@
 	width:0;
 	height:0;
 	position:absolute;	
-	left:500px;
-	top:300px;
+	left:50%;
+	top:75%;
 }
 	#info-bar {		/*info-bar: start is invisible*/
 		width:0;
@@ -145,4 +145,3 @@
 		top:-10px;
 	}		
 		
-
