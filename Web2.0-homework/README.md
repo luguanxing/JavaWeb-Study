@@ -7,7 +7,7 @@
 > * Homework 3 - Ring Menu
 
 ------
-
+<br><br><br>
 ## Homework 1 - Recipe 用HTML+CSS实现以下网页内容<br>
 ![image](https://github.com/luguanxing/Web-Projects/blob/master/Web2.0-homework/pictures/week01.png?raw=true)<br>
 <br><br><br><br><br><br>
@@ -18,3 +18,5 @@
 ![image](https://github.com/luguanxing/Web-Projects/blob/master/Web2.0-homework/pictures/week03_1.png?raw=true)<br>
 ![image](https://github.com/luguanxing/Web-Projects/blob/master/Web2.0-homework/pictures/week03_2.png?raw=true)<br>
 <br><br><br><br><br><br>
+## Homework 5 - Calculator 用HTML+CSS+JAVASCRIPT实现以下动画<br>
+![image](https://github.com/luguanxing/Web-Projects/blob/master/Web2.0-homework/pictures/week05.png?raw=true)<br>
