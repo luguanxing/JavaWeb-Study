@@ -5,6 +5,7 @@
 > * Homework 1 - Recipe
 > * Homework 2 - Movie Review
 > * Homework 3 - Ring Menu
+> * Homework 5 - Calculator
 
 ------
 <br><br><br>
