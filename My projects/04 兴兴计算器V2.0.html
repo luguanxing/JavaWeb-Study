@@ -81,23 +81,19 @@
 	<script language = "Javascript">
 		MAX_INT = 9007199254740992;
 		MIN_INT = -9007199254740992;
-
 		function showstring(result) {
 			document.getElementById("screen").value	= result;
 			document.getElementById("screen").scrollLeft = document.getElementById("screen").scrollWidth;	
 		}
-
 		function addstring(result) {
 			document.getElementById("screen").value += result;
 			document.getElementById("screen").scrollLeft = document.getElementById("screen").scrollWidth;
 		}
-
 		function backstring() {
 			var result = document.getElementById("screen").value;
 			result = result.substring(0, result.length-1);
 			document.getElementById("screen").value = result;
 		}
-
 		function isoperator(s) {
 			if (!isNaN(s))
 				return false;
@@ -105,7 +101,6 @@
 				return false;
 			return true;
 		}
-
 		function check() {
 			var string = document.getElementById("screen").value;
 			if (string == "")
@@ -165,7 +160,6 @@
 				}
 			}
 		}
-
 		window.onload = function() {
 			showstring("");	
 			setbutton();
