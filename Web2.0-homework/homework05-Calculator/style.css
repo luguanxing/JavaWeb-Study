@@ -19,14 +19,15 @@ body {
 	#screen {
 		width:350px;
 		height:80px;
+		resize:none;
+		outline:none;		
 		font-size:50pt;		
-		margin-top:15px;
-		resize: none;
+		margin-top:15px;		
 		text-align:right;		
 		overflow-x:scroll;
 		overflow-y:hidden;
 		white-space:nowrap;			
-		border: 2px solid;
+		border:2px solid;
 		border-radius:15pt;		
 		background:-webkit-gradient(linear, 0% 0%, 100% 0%, from(#00c000), to(#006000));		
 	}
