@@ -21,3 +21,7 @@
 <br><br><br><br><br><br>
 ## Homework 5 - Calculator 用HTML+CSS+JAVASCRIPT实现以下内容<br>
 ![image](https://github.com/luguanxing/Web-Projects/blob/master/Web2.0-homework/pictures/week05.png?raw=true)<br>
+<br><br><br><br><br><br>
+## Homework 6 - Games 用HTML+CSS+JAVASCRIPT实现以下游戏<br>
+![image](https://github.com/luguanxing/Web-Projects/blob/master/Web2.0-homework/pictures/week06_1.png?raw=true)<br>
+![image](https://github.com/luguanxing/Web-Projects/blob/master/Web2.0-homework/pictures/week06_2.png?raw=true)<br>
