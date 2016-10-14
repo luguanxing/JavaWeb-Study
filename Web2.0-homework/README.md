@@ -6,6 +6,7 @@
 > * Homework 2 - Movie Review
 > * Homework 3 - Ring Menu
 > * Homework 5 - Calculator
+> * Homework 6 - Games
 
 ------
 <br><br><br>
