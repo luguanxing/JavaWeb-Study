@@ -30,8 +30,9 @@ function lose() {		//设置游戏函数
 }
 
 function goback() {
+	alert("You Lose!");
+	status = -1;
 	fixtext("历史发展没有回头路！");
-	lose();
 }
 
 function setpath() {	//设置迷宫道路
