@@ -122,7 +122,6 @@ function setstage() {	//设置迷宫阶段
 			alert("Don't cheat, you should start form the 'S' and move to the 'E' inside the maze!");
 			status = -1;
 			fixtext("不能跨阶段实现社会主义！");
-			document.getElementById("maze").style.backgroundColor = "red";
 		}
 	}		
 }
