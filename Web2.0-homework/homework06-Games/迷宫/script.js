@@ -1,4 +1,4 @@
-var status;		//-2未开始,-1输,0开始,1-5各自不同阶段
+var status;		//-2未开始,-1输或赢,0开始,1-5各自不同阶段
 var onpath;		//在道路上为true，不在为false
 var clock;
 
@@ -117,7 +117,7 @@ function setstage() {	//设置迷宫阶段
 			alert("You Win!");
 			fixtext("恭喜！你进入了社会主义新时代！");
 			document.getElementById("stage6").className = "stage_onmouse";				
-			status = -2;
+			status = -1;
 		} else if (status != -1) {
 			alert("Don't cheat, you should start form the 'S' and move to the 'E' inside the maze!");
 			status = -1;
