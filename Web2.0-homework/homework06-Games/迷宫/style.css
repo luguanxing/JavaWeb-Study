@@ -1,0 +1,91 @@
+* {
+	margin-left: auto;
+	margin-right: auto;
+	text-align:center;
+}
+
+h2 {
+	-webkit-transition:all 0.3s linear;
+}
+
+#maze {
+	width:550px;
+	height:420px; 
+	border:1px solid;
+	background-color:#CCC;
+	-webkit-transition:all 0.2s linear;
+}
+	.path {
+		background-color:white;
+	}
+	#path1 {
+		margin-top:300px;
+		margin-left:-25px;
+		width:225px;
+		height:50px;
+	}
+	#path2 {
+		margin-top:-250px;
+		margin-left:150px;		
+		width:50px;
+		height:200px;
+	}
+	#path3 {
+		margin-top:-250px;
+		margin-left:150px;	
+		width:250px;
+		height:50px;
+	}
+	#path4 {
+		margin-left:350px;
+		width:50px;
+		height:200px;
+	}		
+	#path5 {
+		margin-top:0px;
+		margin-left:350px;
+		width:225px;
+		height:50px;
+	}
+	#maze div{
+		background-size:100%;
+	}	
+		.stage {
+			width:50px;
+			height:50px;
+			-webkit-transition:all 0.3s linear;
+		}
+		.stage_onmouse {
+			width:100px;
+			height:100px;
+			margin-top:-25px;
+			-webkit-transition:all 0s linear;			
+		}	
+		#stage1 {
+			background:url("pictures/stage1.jpg") no-repeat;
+			float:left;
+		}		
+		#stage2 {
+			background:url("pictures/stage2.jpg") no-repeat;
+			float:right;
+		}			
+		#stage3 {
+			background:url("pictures/stage3.jpg") no-repeat;
+			position:absolute;	
+		}		
+		#stage4 {
+			background:url("pictures/stage4.jpg") no-repeat;
+			position:absolute;
+			margin-left:200px;
+		}			
+		#stage5 {
+			background:url("pictures/stage5.jpg") no-repeat;
+			position:absolute;
+			float:left;
+		}			
+		#stage6 {
+			background:url("pictures/stage6.jpg") no-repeat;
+			position:absolute;
+			margin-left:175px;
+		}
+		

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<title> 打香菇 </title>
+		<meta charset="utf-8" />
+		<link href="style.css" type="text/css" rel="stylesheet">
+		<script src="script.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<h1 > 打香菇 </h1>
+		<h3 id = "status"> 未开始 </h3>
+		<div class="gameboy">
+			<div id="gamearea">
+				<!--* div*15 *-->
+			</div>
+			<div id="controlarea">
+				<input type="button" class="button" id="start" value="start game" />
+				<input type="button" class="button" id="stop" value="stop game" />				
+				<div class="tip">
+					<textarea class="screen" id="score" readonly="readonly">0</textarea>
+					<div>score</div>
+				</div>
+				<div class="tip">		
+					<textarea class="screen" id="time" readonly="readonly">0</textarea>
+					<div>time</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

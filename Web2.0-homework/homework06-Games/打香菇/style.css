@@ -1,0 +1,111 @@
+* {
+	margin-left:auto;
+	margin-right:auto;
+	-webkit-transition:all 0.1s linear;
+}
+
+body {
+	text-align:center;
+}
+
+.gameboy {
+	width:550px;
+	height:490px;
+	margin-bottom:50px;
+	border:1px solid;
+	border-radius:20pt;
+	background-color:#7B68EE;
+	-webkit-box-shadow: 0px 15px 0px #235;
+}
+
+#gamearea {
+	width:500px;
+	height:300px;
+	margin-top:20px;
+	border:10px solid;
+	border-radius:10pt;
+	background:url("pictures/grass.jpg") repeat;
+	background-size:50%;
+}
+	.hole {
+		float:left;
+		margin:7px;
+		width:85px;
+		height:85px;
+		border-radius:50%;
+		background:-webkit-gradient(linear, 0% 0%, 100% 100%, from(#a66a00), to(#163a10));
+		cursor:help;
+	}
+	#xianggu {
+		background:url("pictures/xianggu.png") no-repeat;
+		background-position:20px 0px;
+		background-color:#FFC0CB;
+		background-size:60%;
+		cursor:Pointer;
+	}
+	#xianggu2 {
+		background:url("pictures/xianggu2.png") no-repeat;
+		background-position:10px 30px;
+		background-color:#FFC0CB;
+		background-size:80%;
+		cursor:Crosshair;
+	}
+
+#controlarea {
+	width:510px;
+	height:100px;
+	border:2px solid;
+	border-radius:20pt;
+	background-color:#0c0;
+	-webkit-box-shadow:0px 5px 0px #880;
+	margin-top:20px;
+}
+	.button {
+		float:left;
+		margin:5px;	
+		width:105px;
+		height:80px;		
+		outline:none;	
+		font-size:15pt;
+		border-radius:20pt;
+		-webkit-box-shadow: 0px 5px 0px #7a0;
+		background:-webkit-gradient(linear, 0% 0%, 100% 100%,from(#00c400), to(#005000));
+	}
+	.button:active {
+		top:5px;
+		position:relative;
+		-webkit-box-shadow: 0px 0px 0px;
+	}
+	.tip {
+		float:left;
+		width:130px;
+		height:90px;
+		font-size:15pt;
+		font-weight:bold;
+		margin-left:5px;
+	}
+		.screen {
+			float:left;
+			width:120px;
+			height:65px;
+			resize:none;
+			outline:none;
+			font-size:40pt;
+			font-weight:bold;		
+			margin-top:5px;
+			margin-left:5px;
+			text-align:right;		
+			overflow-x:scroll;
+			overflow-y:hidden;		
+			border:2px solid;
+			border-radius:15pt;		
+			background:-webkit-gradient(linear, 0% 0%, 100% 0%, from(#00c000), to(#006000));		
+		}	
+		body ::-webkit-scrollbar  {
+			background:-webkit-gradient(linear, 0% 0%, 100% 0%,from(#00c000), to(#006000));	
+			border-radius:50%;	
+		}
+		body ::-webkit-scrollbar-thumb  { 
+			display:none;
+			border-radius:5pt;
+		}		
