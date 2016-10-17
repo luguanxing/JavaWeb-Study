@@ -52,7 +52,7 @@ body {
 	}
 
 #controlarea {
-	width:510px;
+	width:520px;
 	height:100px;
 	border:2px solid;
 	border-radius:20pt;
@@ -62,8 +62,8 @@ body {
 }
 	.button {
 		float:left;
-		margin:5px;	
-		width:105px;
+		margin:7px;	
+		width:85px;
 		height:80px;		
 		outline:none;	
 		font-size:15pt;
@@ -78,23 +78,22 @@ body {
 	}
 	.tip {
 		float:left;
-		width:130px;
+		width:100px;
 		height:90px;
 		font-size:15pt;
+		margin-left:10px;
 		font-weight:bold;
-		margin-left:5px;
 	}
 		.screen {
 			float:left;
-			width:120px;
+			width:90px;
 			height:65px;
 			resize:none;
 			outline:none;
 			font-size:40pt;
-			font-weight:bold;		
-			margin-top:5px;
-			margin-left:5px;
+			font-weight:bold;
 			text-align:right;		
+			margin-top:5px;
 			overflow-x:scroll;
 			overflow-y:hidden;		
 			border:2px solid;
