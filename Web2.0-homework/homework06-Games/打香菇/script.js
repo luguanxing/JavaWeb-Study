@@ -16,6 +16,8 @@ function sethole() {	//设置洞穴
 }
 
 function newxianggu() {		//香菇状态
+	if (!playing)
+		return;
 	var place = Math.round(Math.random()*998)%15;
 	var holes = document.getElementsByClassName("hole");
 	holes[place].setAttribute("id", "xianggu");
@@ -47,7 +49,7 @@ function gg() {
 }
 
 function start() {	//控制台功能
-	if (playing)
+	if (playing || time>0)
 		return;
 	score = 0;
 	time = 30;
@@ -68,6 +70,7 @@ function subtime() {
 		playing = false;
 		document.getElementById("status").innerHTML = "未开始";
 		clearInterval(clock);
+		alert("游戏结束，你的得分是："+score);
 		beaten();
 	}
 }
@@ -81,6 +84,7 @@ function stop() {
 	beaten();
 	clearInterval(clock);
 	document.getElementById("time").value = time;
+	alert("游戏结束，你的得分是："+score);
 	freeze();	/*防止同步问题*/
 }
 
@@ -93,13 +97,49 @@ function unfreeze() {
 	document.getElementById("start").onclick = start;
 }
 
+function pause() {
+	if (!playing)
+		return;
+	if (time>=1) {
+		beaten();
+		playing = false;
+		clearInterval(clock);
+		document.getElementById("pause").value = "go on";
+		document.getElementById("status").innerHTML = "暂停";
+		lock();	/*防止同步问题*/
+	}
+}
+
+function lock() {
+	document.getElementById("pause").onclick = "";
+	setTimeout(unlock, 500);
+}
+
+function unlock() {
+	document.getElementById("pause").onclick = goon;
+}
+
+function goon() {
+	if (playing)
+		return;
+	playing = true;
+	newxianggu();
+	clock = window.setInterval(subtime, 1000);
+	document.getElementById("pause").value = "pause";
+	document.getElementById("status").innerHTML = "游戏中";
+	document.getElementById("pause").onclick = pause;
+}
+
 function setbuttons() {
 	document.getElementById("start").onclick = start;
 	document.getElementById("stop").onclick = stop;
+	document.getElementById("pause").onclick = pause;
 }
 
 window.onload = function() {	//加载游戏
 	playing = false;
+	socre = 0;
+	time = 0;
 	sethole();
 	setbuttons();
 }
