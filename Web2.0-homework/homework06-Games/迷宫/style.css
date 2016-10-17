@@ -8,6 +8,12 @@ h2 {
 	-webkit-transition:all 0.3s linear;
 }
 
+span {
+	width:50px;
+	height:50px;
+	background-color:#CCC;
+}
+
 #maze {
 	width:550px;
 	height:420px; 
