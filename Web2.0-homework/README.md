@@ -7,7 +7,7 @@
 > * Homework 3 - Ring Menu
 > * Homework 5 - Calculator
 > * Homework 6 - Games
-> * Homework 6 - FifteenPuzzle
+> * Homework 7 - FifteenPuzzle
 
 ------
 <br><br><br>
