@@ -7,7 +7,7 @@
 > * Homework 3 - Ring Menu
 > * Homework 5 - Calculator
 > * Homework 6 - Games
-> * Homework 7 - FifteenPuzzle
+> * Homework 7 - Fifteen Puzzle
 
 ------
 <br><br><br>
@@ -27,3 +27,5 @@
 ## Homework 6 - Games 用HTML+CSS+JAVASCRIPT实现以下游戏<br>
 ![image](https://github.com/luguanxing/Web-Projects/blob/master/Web2.0-homework/pictures/week06_1.png?raw=true)<br>
 ![image](https://github.com/luguanxing/Web-Projects/blob/master/Web2.0-homework/pictures/week06_2.png?raw=true)<br>
+## Homework 7 - Games 用HTML+CSS+JAVASCRIPT实现以下游戏<br>
+![image](https://github.com/luguanxing/Web-Projects/blob/master/Web2.0-homework/pictures/week07.png?raw=true)<br>
