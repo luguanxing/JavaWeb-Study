@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<title> 军事大拼图 </title>
+		<meta charset="utf-8" />
+		<link href="style.css" type="text/css" rel="stylesheet" />
+		<script src="script.js" type="text/javascript"></script>
+	</head>
+	<body>
+		<h1> 军事大拼图 </h1>
+		<div id="game">
+			<div class="tools" id="pictures_hide">
+				<div class="picture_hide" id="soliders"></div>
+				<div class="picture_hide" id="tanks"></div>
+				<div class="picture_hide" id="fieldpiece"></div>
+				<div class="picture_hide" id="artillery"></div>
+				<div class="picture_hide" id="cannon"></div>
+			</div>
+			<div id="gameboy">
+				<div id="gamearea">
+					<!--拼图部分-->
+				</div>
+				<div id="controlarea">
+					<input type="button" class="button" id="start" value="开始" />
+					<input type="button" class="button" id="changepictures" value="换图片" />
+					<input type="button" class="button" id="changedifficulty" value="选难度" />				
+					<div class="tip">
+						<textarea class="screen" id="score" readonly="readonly">0</textarea>
+						<div>已走步数</div>
+					</div>
+				</div>
+			</div>
+			<div class="tools" id="difficulty_hide">
+				<div class="button_hide" id="difficulty1">士兵</div>
+				<div class="button_hide" id="difficulty2">军士</div>
+				<div class="button_hide" id="difficulty3">士官</div>
+				<div class="button_hide" id="difficulty4">尉官</div>
+				<div class="button_hide" id="difficulty5">校官</div>	
+				<div class="button_hide" id="difficulty6">将官</div>
+			</div>
+		</div>
+	</body>
+</html>
