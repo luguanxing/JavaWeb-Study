@@ -27,5 +27,6 @@
 ## Homework 6 - Games 用HTML+CSS+JAVASCRIPT实现以下游戏<br>
 ![image](https://github.com/luguanxing/Web-Projects/blob/master/Web2.0-homework/pictures/week06_1.png?raw=true)<br>
 ![image](https://github.com/luguanxing/Web-Projects/blob/master/Web2.0-homework/pictures/week06_2.png?raw=true)<br>
+<br><br><br><br><br><br>
 ## Homework 7 - Games 用HTML+CSS+JAVASCRIPT实现以下游戏<br>
 ![image](https://github.com/luguanxing/Web-Projects/blob/master/Web2.0-homework/pictures/week07.png?raw=true)<br>
