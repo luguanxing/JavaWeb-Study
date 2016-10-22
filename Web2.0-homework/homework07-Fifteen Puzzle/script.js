@@ -30,41 +30,17 @@ function showpictures() {
 	document.getElementById("pictures_hide").id = "pictures";
 	pictures_hide = false;
 	setbuttons();
-	document.getElementById("soliders").onclick = function () {
-		backgroundpictureponit = 0;
-		setpuzzle(backgroundpicture[backgroundpictureponit]);
-		playing = false;
-		score = 0;
-		document.getElementById("score").value = score;		
-	}
-	document.getElementById("tanks").onclick = function () {
-		backgroundpictureponit = 1;
-		setpuzzle(backgroundpicture[backgroundpictureponit]);
-		playing = false;
-		score = 0;
-		document.getElementById("score").value = score;		
-		
-	}	
-	document.getElementById("fieldpiece").onclick = function ()  {
-		backgroundpictureponit = 2;
-		setpuzzle(backgroundpicture[backgroundpictureponit]);
-		playing = false;
-		score = 0;
-		document.getElementById("score").value = score;				
-	}
-	document.getElementById("artillery").onclick = function ()  {
-		backgroundpictureponit = 3;
-		setpuzzle(backgroundpicture[backgroundpictureponit]);
-		playing = false;
-		score = 0;
-		document.getElementById("score").value = score;				
-	}
-	document.getElementById("cannon").onclick = function ()  {
-		backgroundpictureponit = 4;
-		setpuzzle(backgroundpicture[backgroundpictureponit]);
-		playing = false;
-		score = 0;
-		document.getElementById("score").value = score;				
+	for (i = 0; i < 5; i++) {
+		var picture = backgroundpicture[i];
+		var name = picture.substr(1, picture.length-1);	
+		document.getElementById(name).setAttribute("index", i);
+		document.getElementById(name).onclick = function () {
+			backgroundpictureponit = this.getAttribute("index");			
+			setpuzzle(backgroundpicture[backgroundpictureponit]);
+			playing = false;
+			score = 0;
+			document.getElementById("score").value = score;				
+		};
 	}
 }
 
