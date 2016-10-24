@@ -31,7 +31,7 @@ function showpictures() {
 	pictures_hide = false;
 	setbuttons();
 	for (i = 0; i < 5; i++) {
-		(function(i) {
+		(function(i) {		//闭包实现"循环保留变量"
 			var picture = backgroundpicture[i];
 			var name = picture.substr(1, picture.length-1);				
 			document.getElementById(name).onclick = function () {		
