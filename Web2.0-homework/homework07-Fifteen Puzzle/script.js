@@ -31,16 +31,17 @@ function showpictures() {
 	pictures_hide = false;
 	setbuttons();
 	for (i = 0; i < 5; i++) {
-		var picture = backgroundpicture[i];
-		var name = picture.substr(1, picture.length-1);	
-		document.getElementById(name).setAttribute("index", i);
-		document.getElementById(name).onclick = function () {
-			backgroundpictureponit = this.getAttribute("index");			
-			setpuzzle(backgroundpicture[backgroundpictureponit]);
-			playing = false;
-			score = 0;
-			document.getElementById("score").value = score;				
-		};
+		(function(i) {
+			var picture = backgroundpicture[i];
+			var name = picture.substr(1, picture.length-1);				
+			document.getElementById(name).onclick = function () {		
+				backgroundpictureponit = i;			
+				setpuzzle(backgroundpicture[backgroundpictureponit]);
+				playing = false;
+				score = 0;
+				document.getElementById("score").value = score;				
+			};
+		})(i);
 	}
 }
 
