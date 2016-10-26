@@ -8,6 +8,7 @@
 > * Homework 5 - Calculator
 > * Homework 6 - Games
 > * Homework 7 - Fifteen Puzzle
+> * Homework 8 - Table Sorter
 
 ------
 <br><br><br>
