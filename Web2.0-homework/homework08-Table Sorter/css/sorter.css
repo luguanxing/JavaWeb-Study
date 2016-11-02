@@ -1,0 +1,48 @@
+* {
+	text-align:left;
+	font-family: Arial;
+	-webkit-transition:all 0.25s linear;
+}
+
+h1,h2,th {
+	font-family: "Century Gothic";
+}
+
+table {
+	border:2px solid #DCDCDC;
+	border-collapse:collapse;
+}
+
+table th {
+	color:white;
+	cursor: pointer;		
+	background-color:#00197D;		
+}	
+
+table th, table td {
+	border:1px solid #C8C8C8;
+}
+
+tbody tr:nth-of-type(2n) {
+	background-color:#DCDCDC;
+}
+
+.icon {	
+	width: 15px;
+	height: 15px;
+	float:right;	
+	margin-top:2px;
+	background-size:cover;			
+}
+
+.chosen {
+	background-color:#A4B0FC;
+}
+
+.ascend {
+	background:url("../img/ascend.png");
+}
+
+.descend {
+	background:url("../img/descend.png");
+}	
