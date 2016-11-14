@@ -36,6 +36,6 @@
 ## Homework 8 - Table Sorter 用HTML+CSS+JAVASCRIPT/JQEURY实现以下游戏<br>
 ![image](https://github.com/luguanxing/Web-Projects/blob/master/Web2.0-homework/pictures/week08.png?raw=true)<br>
 <br><br><br><br><br><br>
-## Homework 9 - Sign Up 用Node.js后端实现以下服务器<br>
+## Homework 9 - Sign Up 用前端html/css/javascript+后端Node.js后端实现以下服务器<br>
 ![image](https://github.com/luguanxing/Web-Projects/blob/master/Web2.0-homework/pictures/week09.jpg?raw=true)<br>
 <br><br><br><br><br><br>
