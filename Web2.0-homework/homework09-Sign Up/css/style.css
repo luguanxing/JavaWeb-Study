@@ -96,6 +96,7 @@ form {
 	left:-10px;
 }
 #symbol {
+	margin-top:10px;
 	width:100px;
 	height:100px;
 	background:url("../pic/symbol.jpg");
@@ -103,6 +104,6 @@ form {
 }
 #symbol:hover {
 	-webkit-transition:all 0.2s linear;	
-	-webkit-transform: scale(1.1, 1.1);
+	-webkit-transform: scale(1.2, 1.2);
 	border:2px solid red;
 }
