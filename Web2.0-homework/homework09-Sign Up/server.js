@@ -107,7 +107,7 @@ function checkempty(response) {
 		return 1;
 	else if (usersignupstudentid == "" || usersignupstudentid == formatstring[1])
 		return 2;
-	else if (usersignupphone == "" || usersignupstudentid == formatstring[2])	
+	else if (usersignupphone == "" || usersignupphone == formatstring[2])	
 		return 3;
 	else if (usersignupemail == "" || usersignupemail == formatstring[3])
 		return 4;

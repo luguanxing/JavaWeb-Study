@@ -86,7 +86,6 @@ form {
 .button:active {
 	top:5px;
 }
-
 #summit {
 	background:green;	
 	right:-10px;	
@@ -94,6 +93,9 @@ form {
 #reset {
 	background:red;	
 	left:-10px;
+}
+.fakebutton {	
+	background:gray !important;
 }
 #symbol {
 	margin-top:10px;

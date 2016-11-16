@@ -1,4 +1,4 @@
-Hitler,19891945,10000000000,Fuhrer@Reich.com
+Hitler,18891945,10000000000,Fuhrer@Reich.com
 Stalin,18781953,20000000000,Marshal@CCCP.com
 Maozedong,18931976,30000000000,Chairman@China.com
 Napoleon,17691821,40000000000,Emperor@France.com
