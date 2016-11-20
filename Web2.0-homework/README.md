@@ -40,3 +40,6 @@
 ## Homework 9 - Sign Up 用前端html/css/javascript+后端Node.js后端实现以下服务器<br>
 ![image](https://github.com/luguanxing/Web-Projects/blob/master/Web2.0-homework/pictures/week09.jpg?raw=true)<br>
 <br><br><br><br><br><br>
+## Homework 10 - Asynchronous JavaScript 用异步实现获得随机数相加功能<br>
+![image](https://github.com/luguanxing/Web-Projects/blob/master/Web2.0-homework/pictures/week10.png?raw=true)<br>
+<br><br><br><br><br><br>
