@@ -172,7 +172,7 @@ function eHandler() {
 function bubbleHandler() {
 	setTimeout(function() {
 		$("#hint").html("楼猪异步战斗力感人，目测不超过");
-												$(".info")[0].style.opacity = 1;											
-										getsum.call(this);
+		$(".info")[0].style.opacity = 1;											
+		getsum.call(this);
 	},1500);	
 }
