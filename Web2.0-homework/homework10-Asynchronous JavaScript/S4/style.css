@@ -1,0 +1,136 @@
+* {	/*请使用google浏览器chrome,以体现山寨效果*/
+	margin:0px;	
+	padding:0px;
+	list-style:none;
+	font-weight:bold;
+	font-family:Arial;
+	border-radius:50%;
+	-webkit-transition:all 0.38s linear;
+}
+#at-plus-container {
+	width:0;
+	height:0;	
+	position:absolute;
+	left:50%;
+	top:50%;	
+}
+
+#button:hover {	/*begin from button<div>*/
+	margin-top:-150px;
+	margin-left:-100px;
+	width:200px;
+	height:250px;
+}
+	#info-bar {		/*info-bar: start is invisible*/
+		width:0;
+		height:0;
+		opacity:0;		
+		overflow:hidden;
+		background-color:rgb(130, 130, 130);		
+		position:absolute;
+		left:30px;
+		top:30px;
+		cursor:pointer;
+	}
+	#order {
+		margin-top:15px;
+		text-align:center;
+		color:yellow;		
+	}
+	#button:hover #info-bar{		/*info-bar: end is bigg*/
+		width:130px;
+		height:130px;
+		opacity:1;
+		left:-47px;
+		top:-147px;		
+	}
+		.info {
+			margin-top:-33px;
+			padding-top:38px;
+			text-align:center;
+			font-size:36pt;
+			color:#00CC55;		
+		}
+	#control-ring-container li {	 /*ring: start position(0,0) + invisible*/
+		width:33px;
+		height:33px;
+		background-color:rgba(48, 63, 159, 1);
+		background-position:center;
+		position:absolute;
+		opacity:0;
+		left:0;
+		top:0;
+		text-align:center;
+		cursor:pointer;
+	}
+		.word {
+			top:4px;
+			left:9px;
+			position:absolute;
+			color:#00CC55;
+			font-size:16pt;
+		}
+		.unread {
+			width:20px;
+			height:20px;
+			color:white;
+			font-size:10pt;				
+			text-align:center;
+			background-color:red;				
+			font-family:Microsoft YaHei;				
+			position:absolute;
+			left:22px;
+			top:-6px;					
+		}	
+	#button:hover #control-ring-container li {		/*ring: end position(?,?) + visible*/
+		opacity:1;
+	}			
+		#button:hover .mask {
+			left:-62px;
+			top:-35px;			
+		}
+		#button:hover .history {
+			left:-71px;
+			top:2px;			
+		}
+		#button:hover .message {
+			left:-58px;
+			top:38px;				
+		}		
+		#button:hover .setting {
+			left:-23px;
+			top:58px;			
+		}
+		#button:hover .sign {
+			left:20px;
+			top:57px;		
+		}
+	.hover {
+		background-color:gray !important;		
+	}	
+	.apb {		/*center icon: start small*/
+		width:27px;
+		height:27px;	
+		background:url("../images/atplus_white.png") no-repeat;
+		background-size:75%;		
+		background-color:rgb(154,158,203);
+		background-position:center;
+		-webkit-transition-delay:0.65s;
+		cursor:pointer;
+		position:absolute;
+		left:0;
+		top:0;
+	}	
+	#button:hover .apb {		/*center icon: end bigger*/
+		width:52px;
+		height:52px;
+		background-image:url("../images/atplus_green.png");
+		background-size:75%;
+		background-color:rgba(48, 63, 159, 1);
+		-webkit-transition-delay:0.01s;
+		position:absolute;
+		left:-10px;
+		top:-10px;
+	}		
+		
+
