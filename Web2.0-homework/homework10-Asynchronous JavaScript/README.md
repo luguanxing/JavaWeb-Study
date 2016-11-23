@@ -1,10 +1,10 @@
 #Asynchronous JavaScript
-![image](https://github.com/luguanxing/Web-Projects/blob/master/Web2.0-homework/homework10-Asynchronous JavaScript\S5\view.gif?raw=true)<br>
+![image](https://github.com/luguanxing/Web-Projects/blob/master/Web2.0-homework/homework10-Asynchronous%20JavaScript/images/view.gif?raw=true)<br>
 <br>
 
-##²ÉÓÃ±Õ°ü»ò¶¨Ê±ÊµÏÖ×Ô¶¯µã»÷¹¦ÄÜ
-##100%¶¯»­Ğ§¹û
-##Ô¤ÅĞÎ´À´´íÎó´¦Àí
+##é‡‡ç”¨é—­åŒ…æˆ–å®šæ—¶å®ç°è‡ªåŠ¨ç‚¹å‡»åŠŸèƒ½
+##100%åŠ¨ç”»æ•ˆæœ
+##é¢„åˆ¤æœªæ¥é”™è¯¯å¤„ç†
 
 2016-11-23<br>
 By Lgx<br>
