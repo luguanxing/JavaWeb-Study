@@ -3,8 +3,9 @@ window.onload = function() {
 	setbutton();
 }
 
-function error(msg) {
+function error(msg, sum) {
 	this.msg = msg;
+	this.sum = sum;
 }
 
 function reset() {
