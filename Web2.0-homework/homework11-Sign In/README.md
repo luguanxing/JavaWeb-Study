@@ -1,0 +1,1 @@
+windows下点击npmstart.bat就可以啦
