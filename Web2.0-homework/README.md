@@ -12,6 +12,7 @@
 > * Homework 9 - Sign Up
 > * Homework 10 - Asynchronous JavaScript
 > * Homework 11 - Sign in
+> * Homework 12 - Blog
 
 ------
 <br><br><br>
