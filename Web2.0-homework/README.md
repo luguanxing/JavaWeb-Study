@@ -1,4 +1,4 @@
-#Web2.0作业摘要
+#Web2.0作业摘要-2016
 
 ------
 
@@ -45,7 +45,7 @@
 ## Homework 10 - Asynchronous JavaScript 用异步实现不同形式的获得随机数相加功能(人工交互、顺序、同时、乱序等)<br>
 ![image](https://github.com/luguanxing/Web-Projects/blob/master/Web2.0-homework/pictures/week10.png?raw=true)<br>
 <br><br><br><br><br><br>
-## Homework 11 - Sign in 用Express框架实现登录功能
+## Homework 11 - Sign in 用Express框架实现登录功能(含数据库)
 ![image](https://github.com/luguanxing/Web-Projects/blob/master/Web2.0-homework/pictures/week11.jpg?raw=true)<br>
 <br><br><br><br><br><br>
 ## Homework 12 - Blog 用Express框架实现SPA博客功能
