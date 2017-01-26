@@ -1,0 +1,9 @@
+section
+  h3 {{post.title}}
+  div {{post.text}}
+  h5 ————{{post.author}}
+  a(href='/getPosts/#templatemo_menu')
+    button 返回
+  a(href='/editPost/{{post.id}}#templatemo_menu') 编辑
+  |  - 
+  a(href='/deletePost/{{post.id}}#templatemo_menu') 删除

@@ -1,0 +1,213 @@
+/* app css stylesheet */
+* {
+	text-align:center;
+	font-weight:bold;
+	font-family: Verdana, Tahoma, sans-serif;
+}
+
+textarea {
+	resize: none;
+}
+
+body {
+	background:url("../images/background.jpg") repeat;
+	background-size:cover;
+}
+
+a:link, a:visited, a:hover, a:active {
+ text-decoration: none;
+}
+
+#blog_head {
+	height:100px;
+
+	position:relative;
+}
+
+#blog_head_text {
+	margin:3px;
+	font-size:35pt;
+	left:550px;
+	position:absolute;
+}
+
+#blog_body {
+	height:100px;	
+	margin:3px;
+	position:relative;
+}
+
+#items {
+	list-style-type: none;
+	padding:0;
+}
+
+#items li {
+	margin:15px;
+	width:150px;
+	height:80px;
+	border:1px solid;
+	position:absolute;
+}
+#items li:nth-of-type(1) {
+	left:150px;
+}
+
+#items li:nth-of-type(2) {
+	left:350px;
+}
+
+#items li:nth-of-type(3) {
+	left:550px;
+}
+
+#items li:nth-of-type(4) {
+	left:750px;
+}
+#items li:nth-of-type(5) {
+	left:950px;
+}
+
+#blog_commit {
+	overflow: auto;
+	border:1px solid gray;
+	height:620px;
+	width:550px;
+	color:#ff0;
+}
+#blog_commit p {
+	text-align:center;
+	margin-top:10px ;
+	margin-left:auto ;
+	margin-right:auto;
+}
+#blog_commit h1 {
+	height:50px;
+	padding-top:30px;
+	margin:5px;
+	color:#fff;
+	background:none !important;
+}
+#blog_commit h3 {
+	color:#0d0;
+	border:none !important;
+	background:none !important;
+}
+#blog_commit #del {
+    color:#c0f048;
+}
+#blog_commit span {
+	color:#ff0;
+	border:none !important;
+}
+#blog_commit h4 {
+	margin-top:15px;
+	color:red;
+	background:none !important;
+	border:none !important;
+}
+#blog_commit h5 {
+	position: relative;
+    color: #fff;
+    margin: 0;
+    border: none !important;
+    background: none !important;
+}
+#blog_commit h6 {
+	margin-top:-2px;
+	border:none !important;
+	background:none !important;
+}
+.ng-binding{
+
+}
+.ng-scope {
+	background:#888;
+	border:1px solid green;
+	margin-bottom:15px;
+	word-wrap:break-word; 
+	word-break:break-all; 
+}
+.ng-scope textarea {
+	border-radius:5pt;
+}
+.section_w560 {
+	color:white !important;
+	border:none !important;
+	background:none !important;	
+}
+.project {
+	width:250px;
+	margin-left:15px;	
+	border:1px solid gray;
+	margin-bottom: 25px;
+	float:left;
+}
+.project p, h3, a, li {
+	text-align:center;
+	padding:0;
+	margin:0;
+}
+.project p{
+	 text-align:center !important;	
+}
+
+.chosen {
+}
+
+.chosen2{
+	color: #212629  !important;
+	background: url(../images/templatemo_menu_hover.png) left center no-repeat !important;
+}
+
+#pagecontrol {
+    width: 120px;
+    height: 30px;
+    border: none;
+    position: relative;
+    left: 215px;
+	padding-top:2px;
+	background-color:RGB(33,38,42);
+}
+
+#leftpage {
+    width:30px;
+    height:25px;
+    border: none;
+    float:left;
+	cursor:pointer;
+    background: url(../images/left.ico) left bottom no-repeat;
+	background-size: contain;
+}
+
+#rightpage {
+    width:30px;
+    height:25px;
+    border: none;
+    float:right;
+	cursor:pointer;
+    background: url(../images/right.ico) right bottom no-repeat;
+	background-size: contain;
+}
+
+body ::-webkit-scrollbar    {
+	margin-bottom:3px;
+	background-color:RGB(33,38,42);
+		
+}
+body ::-webkit-scrollbar-thumb    { 
+ 	background-color:RGB(83,88,88);
+
+}	
+body ::-webkit-scrollbar-button    { 
+ 	display:none;
+}
+body ::-webkit-scrollbar-track{
+
+}
+body ::-webkit-scrollbar-track-piece{
+	background-color:RGB(33,38,42);
+}
+body ::::-webkit-scrollbar-corner {
+ 	display:none;
+}

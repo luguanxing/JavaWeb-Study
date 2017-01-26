@@ -1,0 +1,9 @@
+<br>
+div
+  h3 {{post.title}}
+  span {{post.text}}
+  #del
+    要删除这条评论吗?<br>
+    button(ng-click='deletePost()') 是
+    |  - 
+    button(ng-click='home()') 否

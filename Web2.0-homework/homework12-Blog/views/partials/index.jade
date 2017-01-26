@@ -1,0 +1,12 @@
+h2 评论区
+h4 已有{{posts.length}}条评论...
+div(ng-repeat='post in posts' class="sortitem")
+  h3 {{post.title}}
+  span {{post.text}}
+  h5 ————{{post.author}}
+    br
+  a(href='/readPost/{{post.id}}#templatemo_menu') 详情
+div(id = "pagecontrol")
+  span 第0页
+  div(id = "leftpage")
+  div(id = "rightpage")
