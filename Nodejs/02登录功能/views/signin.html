@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<title>登录系统</title>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../images/favicon.ico">
+		<link type="text/css" rel="stylesheet" href="../stylesheets/style.css"/>
+		<script type="text/javascript" src="../javascripts/jquery.js"></script>	
+		<script type="text/javascript" src="../javascripts/signin.js"></script>	
+	</head>
+	
+	<body>
+		<div id="registerbox2">
+			<div id="hints"> &nbsp </div>
+			<form method = "POST" action="">
+				<table>
+					<tr>	
+						<td>姓名：<input type="text" id="username" name="username"/></td>
+					</tr>
+					<tr>	
+						<td>密码：<input type="password" id="password" name="password"/></td>
+					</tr>			
+				</table>
+				<div class = "buttons">
+					<input class = "button" id = "signin" value="登录" readonly="readonly"/>
+					<input class = "button" id = "signup" value="注册" readonly="readonly"/>
+				</div>				
+			</form>
+		</div>
+	</body>
+</html>
