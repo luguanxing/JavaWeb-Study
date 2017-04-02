@@ -20,3 +20,8 @@
 利用标签计算数据
 <br><br><br><br><br><br>
 
+
+## homework03-session的使用<br>
+![image](https://github.com/luguanxing/Web-Projects/blob/master/JSP-homework/pictures/3.jpg?raw=true)<br>
+简单注册&登录功能
+<br><br><br><br><br><br>
