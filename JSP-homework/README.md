@@ -23,5 +23,5 @@
 
 ## homework03-session的使用<br>
 ![image](https://github.com/luguanxing/Web-Projects/blob/master/JSP-homework/pictures/3.jpg?raw=true)<br>
-简单注册&登录功能
+简单注册&登录功能&session保存状态
 <br><br><br><br><br><br>
