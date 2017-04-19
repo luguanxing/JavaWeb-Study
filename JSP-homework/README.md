@@ -6,6 +6,7 @@
 > * homework02-Tag标签的使用
 > * homework03-session的使用
 > * homework04-javabean的使用
+> * homework05-mysql数据库的使用
 
 ------
 <br><br>
