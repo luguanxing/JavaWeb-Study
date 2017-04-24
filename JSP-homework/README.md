@@ -32,3 +32,8 @@
 ![image](https://github.com/luguanxing/Web-Projects/blob/master/JSP-homework/pictures/4.jpg?raw=true)<br>
 使用javabean保存数据并显示
 <br><br><br><br><br><br>
+
+## homework05-mysql数据库的使用<br>
+![image](https://github.com/luguanxing/Web-Projects/blob/master/JSP-homework/pictures/5.jpg?raw=true)<br>
+使用MySQL数据库做评论功能的增删改查
+<br><br><br><br><br><br>
