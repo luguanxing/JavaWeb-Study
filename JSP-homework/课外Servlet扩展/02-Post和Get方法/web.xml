@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <servlet>
+        <servlet-name>pag</servlet-name>
+        <servlet-class>my.PostAndGet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>pag</servlet-name>
+        <url-pattern>/check</url-pattern>
+    </servlet-mapping>
+</web-app>
