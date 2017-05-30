@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <servlet>
+        <servlet-name>check</servlet-name>
+        <servlet-class>controller.Check</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>check</servlet-name>
+        <url-pattern>/check</url-pattern>
+    </servlet-mapping>
+</web-app>
