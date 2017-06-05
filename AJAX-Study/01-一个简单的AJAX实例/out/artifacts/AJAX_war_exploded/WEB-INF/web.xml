@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    
+    <servlet>
+        <servlet-name>ClassicServer</servlet-name>
+        <servlet-class>ClassicServer</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AJAXServer</servlet-name>
+        <servlet-class>AJAXServer</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>ClassicServer</servlet-name>
+        <url-pattern>/ClassicServer</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AJAXServer</servlet-name>
+        <url-pattern>/AJAXServer</url-pattern>
+    </servlet-mapping>
+</web-app>
