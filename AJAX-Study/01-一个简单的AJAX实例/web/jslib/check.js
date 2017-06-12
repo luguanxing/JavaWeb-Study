@@ -15,3 +15,10 @@ function dataCallback(data) {
     //4.将返回的数据动态显示到页面上
     $("#result").html(data);
 }
+
+//简略写法
+function check_simple() {
+    $.get("AJAXServer?name=" + $("#username").val(), null, function (data) {
+        $("#result").html(data);
+    });
+}
