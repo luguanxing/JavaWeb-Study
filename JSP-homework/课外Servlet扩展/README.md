@@ -35,4 +35,3 @@
 ## 05-MVC模式<br>
 ![image](https://github.com/luguanxing/Web-Study/blob/master/JSP-homework/%E8%AF%BE%E5%A4%96Servlet%E6%89%A9%E5%B1%95/pictures/05.gif?raw=true)<br>
 MVC模式
-<br><br><br><br><br><br>
