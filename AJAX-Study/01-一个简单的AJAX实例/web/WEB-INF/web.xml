@@ -12,6 +12,10 @@
         <servlet-name>AJAXServer</servlet-name>
         <servlet-class>AJAXServer</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AJAXXMLServer</servlet-name>
+        <servlet-class>AJAXXMLServer</servlet-class>
+    </servlet>
     
     <servlet-mapping>
         <servlet-name>ClassicServer</servlet-name>
@@ -21,4 +25,9 @@
         <servlet-name>AJAXServer</servlet-name>
         <url-pattern>/AJAXServer</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AJAXXMLServer</servlet-name>
+        <url-pattern>/AJAXXMLServer</url-pattern>
+    </servlet-mapping>    
+    
 </web-app>

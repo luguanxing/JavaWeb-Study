@@ -37,7 +37,7 @@ function  check_js_get() {
     
     //4.设置链接信息，包括请求方式（get或post）、请求url地址、请求方式（同步或异步）
     //GET方式
-    //xmlhttp.open("GET", "AJAXServer?name=" + username, true);
+    xmlhttp.open("GET", "AJAXServer?name=" + username, true);
     
     //5.发送数据，和服务器端进行交互，参数若已用URL传递则send空值，同步方式会在此等到数据返回
     xmlhttp.send(null);

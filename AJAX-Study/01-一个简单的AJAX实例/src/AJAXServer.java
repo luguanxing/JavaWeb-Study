@@ -15,11 +15,11 @@ public class AJAXServer extends HttpServlet {
             req.setCharacterEncoding("UTF-8");
             resp.setContentType("text/html;charset=utf-8");
             PrintWriter out = resp.getWriter();
-            String old = req.getParameter("name");  //1.取参数信息
-            if(old == null || old.length() == 0){   //2.检查参数合法
+            String name = req.getParameter("name");  //1.取参数信息
+            if(name == null || name.length() == 0){   //2.检查参数合法
                 out.println("用户名不能为空");
             } else{
-                String name = old;   //3.校验操作
+                //3.校验操作
                 if(name.equals("luguanxing")){
                     out.println("用户名[" + name + "]已经存在，请使用其他用户名");  //4.区别传统应用，这里只返回用户需要的数据(*)而不是返回新页面
                 } else{
