@@ -97,7 +97,7 @@ function callback() {
             //使用responseXML方式接收XML数据DOM对象，获取节点并显示
             var dom = xmlhttp.responseXML;
             var messageNodes = dom.getElementsByTagName("message");
-            var text = messageNodes[0].innerHTML;
+            var text = messageNodes[0].firstChild.nodeValue;
             document.getElementById('result').innerHTML = text;
 
         }
