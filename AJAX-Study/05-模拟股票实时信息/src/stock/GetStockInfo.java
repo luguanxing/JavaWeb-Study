@@ -37,8 +37,6 @@ public class GetStockInfo extends HttpServlet {
 		//添加股票
 		stocks.put(szzs.getId(), szzs);
 		stocks.put(pfyh.getId(), pfyh);
-
-		System.out.println(stocks);
 	}
 
 	@Override    //更新并返回两只股票价格信息
@@ -72,9 +70,6 @@ public class GetStockInfo extends HttpServlet {
 		Stock pfyh = stocks.get("000001");
 		double now_pfyh = (isUp_pfyh)? pfyh.getNow() + rmd_pfyh : pfyh.getNow() - rmd_pfyh;
 		pfyh.setNow(((int)(now_pfyh*100))/100.0);
-
-		System.out.println(szzs);
-		System.out.println(pfyh);
 	}
 	
 	public String GetStockJson() throws JSONException {
