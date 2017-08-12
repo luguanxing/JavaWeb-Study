@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+		version="3.1">
+	
+	<!--主页index-->
+	<servlet>
+		<servlet-name>index</servlet-name>
+		<servlet-class>index</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>index</servlet-name>
+		<url-pattern>/index</url-pattern>
+	</servlet-mapping>
+	
+	<!--主页index过滤器，注意按顺序，先1后2-->
+	<filter>
+		<filter-name>filter1</filter-name>
+		<filter-class>Filter1</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>filter1</filter-name>
+		<url-pattern>/index</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>filter2</filter-name>
+		<filter-class>Filter2</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>filter2</filter-name>
+		<url-pattern>/index</url-pattern>
+	</filter-mapping>
+	
+	
+</web-app>
