@@ -1,0 +1,68 @@
+* {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body {
+	text-align:center;
+	margin-bottom: 50px;	
+}
+
+.calc {
+	width:400px;
+	height:500px;
+	border:3px solid;
+	border-radius:20pt;
+	-webkit-box-shadow: 0px 10px 0px #030;	
+	background:url("pictures/skin.jpg") repeat;
+}
+	#screen {
+		width:350px;
+		height:80px;
+		resize:none;
+		outline:none;		
+		font-size:50pt;		
+		margin-top:15px;		
+		text-align:right;		
+		overflow-x:scroll;
+		overflow-y:hidden;
+		white-space:nowrap;			
+		border:2px solid;
+		border-radius:15pt;		
+		background:-webkit-gradient(linear, 0% 0%, 100% 0%, from(#00c000), to(#006000));		
+	}
+	.buttons {
+		width:350px;
+		height:360px;
+		margin-top:13px;		
+		border:2px solid;
+		border-radius:15pt;
+		background-color:RGB(0,80,0);	
+	}
+		.buttons .button {
+			float:left;				
+			width:75px;
+			height:60px;		
+			outline: none;			
+			font-size:25pt;
+			margin-top:10px;
+			margin-left:10px;
+			border-radius:20pt;
+			-webkit-box-shadow: 0px 5px 0px #7a0;
+			background:-webkit-gradient(linear, 0% 0%, 100% 100%,from(#00c400), to(#005000));
+		}
+		.buttons .button:active {
+			top:5px;
+			position:relative;
+			-webkit-box-shadow: 0px 0px 0px;
+		}	
+body ::-webkit-scrollbar    {
+	margin-bottom:3px;
+	background:-webkit-gradient(linear, 0% 0%, 100% 0%,from(#00c000), to(#006000));	
+	border-radius:50%;	
+}
+
+body ::-webkit-scrollbar-thumb    { 
+ 	display:none;
+	border-radius:5pt;
+}		

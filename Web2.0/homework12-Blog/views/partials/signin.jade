@@ -1,0 +1,21 @@
+﻿#registerbox2
+  #hints  &nbsp 
+  | 			
+  form(method="POST", action="")
+    table
+      tr
+        td
+          | 昵称：
+          input#username(type="text", name="username")
+      | 					
+      tr
+        td
+          | 密码：
+          input#password(type="password", name="password")
+    | 				
+    .buttons
+      input#signin.button(value="登录", readonly="readonly")
+      | 					
+      a(href="/signup/#templatemo_menu", onclick='getjs("javascripts/signup.js")')
+        input#signup.button(value="注册", readonly="readonly")
+

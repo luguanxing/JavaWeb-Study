@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<title>注册系统</title>
+		<meta charset="utf-8" />
+		<link rel="icon" href="../images/favicon.ico">
+		<link type="text/css" rel="stylesheet" href="../stylesheets/style.css"/>
+		<script type="text/javascript" src="../javascripts/jquery.js"></script>
+		<script type="text/javascript" src="../javascripts/signup.js"></script>		
+	</head>
+	
+	<body>
+		<div id="registerbox">
+			<div id="hints"> &nbsp </div>
+			<form method = "POST" action="">
+				<table>
+					<tr>
+						<td>姓名：<input type="text" id="username" name="username"/></td>
+					</tr>
+					<tr>	
+						<td>密码：<input type="password" id="password" name="password"/></td>
+					</tr>
+					<tr>	
+						<td>重复：<input type="password" id="password" name="password"/></td>
+					</tr>
+					<tr>	
+						<td>学号：<input type="text" id="studentid" name="studentid"/></td>
+					</tr>
+					<tr>	
+						<td>电话：<input type="text" id="phone" name="phone"/></td>
+					</tr>
+					<tr>	
+						<td>邮箱：<input type="text" id="email" name="email"/></td>
+					</tr>			
+				</table>
+				<div class = "buttons">
+					<input class = "button" id = "summit" value="提交" readonly="readonly"/>
+					<input class = "button" id = "reset" value="重置" readonly="readonly"/>
+				</div>
+				<div id="goback"></div>				
+			</form>
+		</div>
+	</body>
+</html>

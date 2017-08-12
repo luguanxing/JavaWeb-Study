@@ -1,0 +1,68 @@
+
+body {
+	font-family: Century Gothic;
+	background:#000;
+	color: #FFF;
+	text-align: center;
+}
+
+ 
+p:first-letter {
+	font:bold;
+	font-size: 30px;
+	font-variant: small-caps;
+}
+
+p {
+	text-align: center;
+	font-size: 20px;
+}
+
+.span1 {
+	color: #F00;
+	text-align: center;
+	font-weight: bold;
+}
+
+.span2 {
+	color: #00F;
+	text-align: center;
+	font-weight: bold;
+}
+
+.span3 {
+	color: #D8D;
+	text-align: center;
+	font-weight: bold;
+}
+
+a {
+	color: #FF0;
+	text-align: center;
+	text-decoration:blink;
+	animation: change 0.7s  ease-in  infinite ;
+	font-size: 36px;
+	color:#F00;
+	font-weight: bold
+}
+
+@keyframes change {
+	0%{ text-shadow: 5px 5px 5px #F00}
+	50%{ text-shadow: 5px 5px 5px #FF0}
+	100%{ text-shadow: 5px 5px 5px #00F}
+}
+
+.div1 {
+	width:150px;
+	height: 300px;
+	float: left;
+}
+
+.div2 {
+	width:150px;
+	height: 300px;
+	float:right;
+	display:inline;
+}
+
+
