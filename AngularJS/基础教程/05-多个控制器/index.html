@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+		<script src="../lib/js/angular.js" type="text/javascript"></script>
+		<script src="js/index.js" type="text/javascript"></script>
+	</head>
+	<body>
+		
+		<div ng-app>
+			<!--一个叫firstController的控制器变量-->
+			<div ng-controller="firstController">
+				<input type="text" value="" ng-model="name">
+				<p>firstController->name变量 -> {{name}}</p>
+
+				<!--一个叫secondController的控制器变量-->
+				<!--secondController能够访问到firstController因为能向外访问，修改第外层时能影响到内层-->
+				<!--但如果修改了内层同名变量则新建了内部变量，不再影响外部-->
+				<div ng-controller="secondController">
+					<input type="text" value="" ng-model="name">
+					<p>secondController->name变量 -> {{name}}</p>
+				</div>
+				
+			</div>
+		</div>
+		
+	</body>
+</html>
