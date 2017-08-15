@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+	<head>
+		<meta charset="UTF-8">
+		<script src="../../lib/js/angular.js" type="text/javascript"></script>
+		<script src="nest.js" type="text/javascript"></script>
+		<title></title>
+	</head>
+	<body>
+		<div ng-controller="firstController">
+			<input type="text" ng-model="text">
+			<p ng-bind="text"></p>
+			<!--当内部没有局部变量时可向外访问，当内部局部变量修改或创建时不再跟随外部变量一起变化-->
+			<div ng-controller="secondController">
+				<input type="text" ng-model="text">
+				<p ng-bind="text"></p>
+			</div>
+		</div>
+	</body>
+</html>

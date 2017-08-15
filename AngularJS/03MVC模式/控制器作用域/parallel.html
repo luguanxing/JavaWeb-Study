@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+	<head>
+		<meta charset="UTF-8">
+		<script src="../../lib/js/angular.js" type="text/javascript"></script>
+		<script src="parallel.js" type="text/javascript"></script>
+		<title></title>
+	</head>
+	<body>
+		<div ng-controller="firstController">
+			<input type="text" ng-model="text1">
+			<p ng-bind="text1"></p>
+		</div>
+		<div ng-controller="secondController">
+			<input type="text" ng-model="text2">
+			<p ng-bind="text2"></p>
+		</div>
+	</body>
+</html>
