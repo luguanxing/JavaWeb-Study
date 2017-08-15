@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+	<head>
+		<meta charset="UTF-8">
+		<script src="../lib/js/angular.js" type="text/javascript"></script>
+		<title></title>
+	</head>
+	<body ng-init="price = 10; number = 1">
+		<div>
+			<p>价格：</p>
+			<input type="number" ng-model="price" />
+		</div>
+		<div>
+			<p>数量：</p>
+			<input type="number" ng-model="number" />
+		</div>
+		<div>
+			<p>总价：<span ng-bind="price * number"></span></p>
+		</div>
+	</body>
+</html>
