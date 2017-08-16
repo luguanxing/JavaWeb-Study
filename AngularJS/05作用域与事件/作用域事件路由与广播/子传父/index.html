@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+	<head>
+		<meta charset="UTF-8">
+		<script src="../../../lib/js/angular.js" type="text/javascript"></script>
+		<script src="index.js" type="text/javascript"></script>
+		<title></title>
+	</head>
+	<body>
+		<div ng-controller="grandController">
+			<span ng-bind="value"></span>
+			<div ng-controller="parentController">
+				<span ng-bind="value"></span>
+				<div ng-controller="childController">
+					<button ng-click="clickbutton()">子传父</button>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
