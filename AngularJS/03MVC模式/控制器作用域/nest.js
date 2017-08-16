@@ -1,10 +1,11 @@
 
-function firstController($scope) {
+function firstController($scope, $log) {
 	$scope.text = "text";
+	$log.info($scope);
 }
 
-function secondController($scope) {
-	
+function secondController($scope, $log) {
+	$log.info($scope);
 }
 
 var app = angular.module("myapp", []);
