@@ -11,4 +11,3 @@ function calcController($scope) {
 // 绑定到ng-app，注意module名和ng-app名称一致，这里为""myapp"
 var app = angular.module("myapp", []);
 app.controller("calcController", calcController);
-
