@@ -1,0 +1,62 @@
+<!doctype html>
+<html ng-app>
+	<head>
+		<meta charset="UTF-8">
+		<title>AngularJS表单校验模式</title>
+		<script src="/angular-1.5.5/angular.js"></script>
+		<style>
+			input.ng-invalid {
+				border: #f00 2px solid;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<form name="user">
+				<div>
+					<label>检测required效果:</label>
+					<input type="text" name="required" ng-model="required2" required/>
+					<!--ng-model必有，虽不强制要求和name一样(推荐一样)，但用name在ng-show当$invalid为true时显示不可缺少-->
+					<span ng-show="user.required.$invalid" style="color: brown">required内容输入不合法</span>
+				</div>
+				<br>
+				<div>
+					<label>检测type="email"效果:</label>
+					<input type="email" name="email" ng-model="email" required/>
+					<span ng-show="user.email.$invalid" style="color: red">email内容输入不合法</span>
+				</div>
+				<br>
+				<div>
+					<label>检测type="number"效果:</label>
+					<input type="number" name="number" ng-model="number" required/>
+					<span ng-show="user.number.$invalid" style="color: blue">number内容输入不合法</span>
+				</div>
+				<br>
+				<div>
+					<label>检测type="url"效果:</label>
+					<input type="url" name="url" ng-model="url" required/>
+					<span ng-show="user.url.$invalid" style="color: green">url内容输入不合法</span>
+				</div>
+				<br>
+				<div>
+					<label>检测ng-minlength="5"效果:</label>
+					<input type="text" name="min"  ng-model="min" ng-minlength="5" required/>
+					<span ng-show="user.min.$invalid" style="color: darkblue">minlength内容输入不合法</span>
+				</div>
+				<br>
+				<div>
+					<label>检测ng-maxlength="10"效果:</label>
+					<input type="text" name="max"  ng-model="max" ng-minlength="10" required/>
+					<span ng-show="user.max.$invalid" style="color: purple">maxlength内容输入不合法</span>
+				</div>
+				<br>
+				<div>
+					<label>检测ng-pattern = {ip正则表达式}效果:</label>
+					<input type="text" name="ip"  ng-model="ip" ng-pattern="/^(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])$/ " required/>
+					<span ng-show="user.ip.$invalid" style="color: #0ff">ip正则表达式内容输入不合法</span>
+				</div>
+				<br>
+			</form>
+		</div>
+	</body>
+</html>

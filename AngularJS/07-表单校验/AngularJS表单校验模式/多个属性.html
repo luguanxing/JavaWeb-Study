@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app>
+	<head>
+		<meta charset="UTF-8">
+		<title>多个属性</title>
+		<script src="/angular-1.5.5/angular.js"></script>
+		<style>
+			input.ng-invalid {
+				border: #f00 2px solid;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<form name="user">
+				<div>
+					<label>Email:</label>
+					<input type="email"
+						   name="email"
+						   ng-model="email"
+						   ng-minlength="10"
+						   ng-maxlength="20"
+						   required/>
+					<!--同一个表单元素的多个条件使用"表单名.表单元素名.$error.具体错误类型"-->
+					<span ng-show="user.email.$error.required" style="color: brown">内容不能为空</span>
+					<span ng-show="user.email.$error.minlength" style="color: blue">长度不能小于10</span>
+					<span ng-show="user.email.$error.maxlength" style="color: grey">长度不能大于20</span>
+					<span ng-show="user.email.$error.email" style="color: green">不符合Email格式</span>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

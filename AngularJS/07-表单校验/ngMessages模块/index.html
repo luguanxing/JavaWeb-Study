@@ -1,0 +1,56 @@
+<!doctype html>
+<html ng-app="formModule">
+	<head>
+		<meta charset="UTF-8">
+		<title>ngMessages模块</title>
+		<link rel="stylesheet" href="index.css"/>
+		<script src="/angular-1.5.5/angular.js"></script>
+		<script src="/angular-1.5.5/angular-messages.js"></script>
+	</head>
+	<body>
+		<form name="exampleForm" class="elegant-aero">
+
+			<label>引用errors测试:</label>
+			<input type="text" name="testName" ng-model="testName" ng-minlength="6" ng-maxlength="10" required />
+			<div ng-messages="exampleForm.testName.$error">
+				<div ng-messages-include="errors.html"></div>
+			</div>
+			
+			<label>用户姓名:</label>
+			<input type="text" name="userFirstName" ng-model="userFirstName" ng-minlength="6" ng-maxlength="10" required />
+			<div ng-messages="exampleForm.userFirstName.$error">
+				<div ng-message="required">姓名不能为空</div>
+				<div ng-message="minlength">最少6个字符</div>
+				<div ng-message="maxlength">最多10个字符</div>
+				<!--将ng-show的多个相同部分进行提取化简，并且从上到下逐条检验，只显示不符合的最早那条-->
+			</div>
+
+			<label>Email地址:</label>
+			<input type="email" name="userEmail" ng-model="userEmail" required />
+			<div ng-messages="exampleForm.userEmail.$error">
+				<div ng-message="required">Email地址不能为空！</div>
+				<div ng-message="email">Email地址不合法！</div>
+			</div>
+
+			<label>手机号:</label>
+			<input type="email" name="userPhoneNumber" ng-model="userPhoneNumber" ng-pattern="/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/" required/>
+			<div ng-messages="exampleForm.userPhoneNumber.$error">
+				<div ng-message="required">手机号不能为空！</div>
+				<div ng-message="pattern">手机号码不合法！</div>
+			</div>
+
+			<label>用户留言:</label>
+			<textarea type="text" name="userMessage" ng-model="userMessage" class="form-control" rows="4" ng-model="message" ng-minlength="10" ng-maxlength="100" required></textarea>
+			<div ng-messages="exampleForm.userMessage.$error">
+				<div ng-message="required">用户留言不能为空！</div>
+				<div ng-message="minlength">留言信息长度不能少于10个字符！</div>
+				<div ng-message="maxlength">留言信息长度不能多余100个字符！</div>
+			</div>
+		</form>
+		
+		<script>
+			angular.module('formModule', ['ngMessages']);
+		</script>
+		
+	</body>
+</html>
