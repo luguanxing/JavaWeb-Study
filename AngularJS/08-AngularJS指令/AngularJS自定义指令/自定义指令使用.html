@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="directiveModule">
+	<head>
+		<meta charset="UTF-8">
+		<title>自定义指令使用</title>
+		<script src="/angular-1.5.5/angular.js"></script>
+	</head>
+	<body>
+		<p>各种写法:</p>
+		<div hello-world></div>
+		<hello-world></hello-world>
+		<div class="hello-world"></div>
+		<!--hello-world-->
+		<hello:world></hello:world>
+		<div hello:world></div>
+		<div class="hello:world"></div>
+		<script>
+			var app = angular.module("directiveModule",[]);
+			//驼峰式命名，不同词开头用大写
+			app.directive("helloWorld",function(){
+				return {
+					restrict:'EACM',
+					replace:true,
+					templateUrl:'helloworld.html'
+				}
+			});
+		</script>
+	</body>
+</html>
