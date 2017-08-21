@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="directiveModule">
+	<head>
+		<meta charset="UTF-8">
+		<title>孤立作用域</title>
+		<script src="/angular-1.5.5/angular.js"></script>
+	</head>
+	<body>
+		<div ng-controller="MainController">
+			外部作用域name：<input type="text" ng-model="name"/>
+			<say-hello></say-hello>
+		</div>
+		<script>
+			var app = angular.module("directiveModule",[]);
+			app.controller("MainController",function($scope){
+				$scope.name = "LGX";
+			});
+			app.directive("sayHello",function(){
+				return {
+					restrict:'E',
+					scope:{},
+					//孤立作用域{}，不传入任何参数，无法显示内部作用域的{{name}}
+					template:"<h3>内部作用域{name}={{name}}</h3>"
+				}
+			});
+		</script>
+	</body>
+</html>

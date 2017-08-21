@@ -1,0 +1,33 @@
+<!doctype html>
+<html ng-app="directiveModule">
+	<head>
+		<meta charset="UTF-8">
+		<title>原型继承作用域</title>
+		<script src="/angular-1.5.5/angular.js"></script>
+	</head>
+	<body>
+		<div ng-controller="MainController">
+			外部作用域name：<input type="text" ng-model="name"/>
+			外部作用域testname：<input type="text" ng-model="testname"/>
+			<say-hello></say-hello>
+		</div>
+		<script>
+			var app = angular.module("directiveModule",[]);
+			app.controller("MainController",function($scope){
+				$scope.name = "LGX";
+				$scope.testname = "LGX";
+			});
+			app.directive("sayHello",function(){
+				return {
+					restrict:'E',
+					scope:true,
+					link: function (scope, elem, attrs) {
+						scope.testname="LGX2";
+					},
+					//子作用域继承外部，可以在此修改(创建)局部变量，不影响外部，能显示内部作用域继承的{{name}}, {{testname}}
+					template:"<h3>内部作用域{name},{testname}={{name}}, {{testname}}</h3>"
+				}
+			});
+		</script>
+	</body>
+</html>

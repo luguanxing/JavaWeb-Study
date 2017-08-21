@@ -1,0 +1,42 @@
+<!doctype html>
+<html ng-app="directiveModule">
+	<head>
+		<meta charset="UTF-8">
+		<title>使用@建立单向绑定</title>
+		<script src="/angular-1.5.5/angular.js"></script>
+	</head>
+	<body>
+		<div ng-controller="MainController">
+			外部作用域name：<input type="text" ng-model="name"/>
+			外部作用域testname：<input type="text" ng-model="testname"/>
+			<!--设置标签上name-attr,testname属性值为外部作用域的{{name}}和{{testname}}-->
+			<say-hello name-attr="{{name}}" testname="{{testname}}"></say-hello>
+		</div>
+		<script>
+			var app = angular.module("directiveModule",[]);
+			app.controller("MainController",function($scope){
+				//修改外部作用域值
+				$scope.name = "luguanxing";
+				$scope.testname = "lgx";
+			});
+			app.directive("sayHello",function(){
+				return {
+					restrict:'E',
+					//保留传入的作用域，驼峰命名法，当内部作用域变量名和标签名相同时可省略
+					scope:{
+						//内部作用域定义的inner_name，inner_testname值为外部标签name-attr，testname的属性值
+						inner_name:'@nameAttr',
+						testname:'@'
+					},
+					link:function(scope, elem, attrs){
+						//传入时就修改内部作用的值，@是从外到内单向的，修改内部不影响外部，但外部一边内部就变（外部为主）
+						scope.inner_name = "luguanxing2";
+						scope.testname = "lgx2";
+					},
+					//显示内部作用域的{{inner_name}}和{{testname}}
+					template:"<h3>内部作用域{inner_name},{testname}={{inner_name}}, {{testname}}</h3>"
+				}
+			});
+		</script>
+	</body>
+</html>
