@@ -1,4 +1,4 @@
-# AngularJS学习
+﻿# AngularJS学习
 
 ------
 
@@ -11,7 +11,7 @@
 ------
 
 ### 内容
-学习江荣波老师的《AngularJS入门与进阶》，项目部署在IntelliJ IDEA上，使用Tomcat服务器，前5章无序交互可直接打开HTML，其余部分需要运行服务器后再从浏览器中输入localhost/响应目录打开<br>
+学习江荣波老师的《AngularJS入门与进阶》，项目部署在IntelliJ IDEA上，使用Tomcat服务器，需要运行服务器后再从浏览器中输入localhost/响应目录打开<br>
 
 ### 部署结构
 ![image](https://github.com/luguanxing/JavaWeb-Study/blob/master/AngularJS/pictures/structure.jpg?raw=true)<br>
