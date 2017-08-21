@@ -1,0 +1,37 @@
+<!doctype html>
+<html ng-app="directiveModule">
+	<head>
+		<meta charset="UTF-8">
+		<title>link方法实现重复标签</title>
+		<script src="/angular-1.5.5/angular.js"></script>
+	</head>
+	<body>
+		<div repeat="5">
+			<div>
+				<h3>hello world!</h3>
+			</div>
+		</div>
+		<script>
+			var app = angular.module("directiveModule",[]);
+			app.directive("repeat",function(){
+				return {
+					restrict:'A',
+					replace:true,
+					link: function(scope, tElem, tAttrs){
+						var temp = tElem.html();
+						console.log("link 作用域:");
+						console.log(scope);
+						console.log("link 元素:");
+						console.log(tElem);
+						console.log("link 元素内容:");
+						console.log(temp);
+						for(var i=0; i<tAttrs.repeat; i++) {
+							tElem.append(temp);
+						}
+						console.log("link 完成");
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
