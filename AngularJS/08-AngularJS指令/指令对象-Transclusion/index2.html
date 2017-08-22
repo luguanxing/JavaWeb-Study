@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="directiveModule">
+	<head>
+		<meta charset="UTF-8">
+		<title>Transclusion完全内容复制</title>
+		<script src="/angular-1.5.5/angular.js"></script>
+	</head>
+	<body>
+		<div ng-controller="MainController">
+			用户名：<input type="text" ng-model="name"/>
+			<p say-hello>
+				{{name}}
+			</p>
+		</div>
+		<script>
+			var app = angular.module("directiveModule",[]);
+			app.controller("MainController",function($scope){
+				$scope.name = "Luguanxing";
+			});
+			app.directive("sayHello",function(){
+				return {
+					restrict:'AE',
+					replace: true,
+					//transclude属性值为element把包括<p say-hello>标签在内的内容完全复制到<span ng-transclude>标签中
+					transclude: 'element',
+					template:"<h1>Hi <span ng-transclude></span>,Welcome to you!</h1>"
+				}
+			});
+		</script>
+	</body>
+</html>

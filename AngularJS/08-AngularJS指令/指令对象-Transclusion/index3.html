@@ -1,0 +1,40 @@
+<!doctype html>
+<html ng-app="directiveModule">
+	<head>
+		<meta charset="UTF-8">
+		<title>Transclusion实现DOM复制</title>
+		<script src="/angular-1.5.5/angular.js"></script>
+	</head>
+	<body>
+		<div ng-controller="MainController">
+			<!--假设重复三次-->
+			<repeat-element repeat-time="3">
+				<p>Hi {{name}},Welcome to you!</p>
+			</repeat-element>
+		</div>
+		<script>
+			var app = angular.module("directiveModule",[]);
+			app.controller("MainController",function($scope){
+				$scope.name = "Luguanxing";
+			});
+			app.directive("repeatElement",function(){
+				return {
+					restrict:'E',
+					transclude: true,
+					scope: {
+						//把repeat-time标签值传入内部作用域作为重复次数
+						repeatTime:'@'
+					},
+					link: function(scope, elem, attrs, ctrl, transcludeFn) {
+						for(i=0; i < scope.repeatTime-1; i++){
+							transcludeFn(function(clone) {
+								elem.append(clone);
+							});
+						}
+					},
+					template:"<p>重复了{{repeatTime}}次</p><span ng-transclude></span>"
+				}
+			});
+		</script>
+	</body>
+</html>
