@@ -1,0 +1,38 @@
+<!doctype html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title>Provider对象</title>
+		<script src="/angular-1.5.5/angular.js"></script>
+	</head>
+	<body>
+		<div ng-controller="MainController">
+
+		</div>
+		<script>
+			var app = angular.module('app',[]);
+			//注册provider对象，内部包含属性和方法以及回调方法
+			app.provider("custom",function(){
+				this.name = "luguanxing";
+				this.getName = function(){
+					return name;
+				}
+				this.$get = function(){
+					//保存内部this.name的值
+					var thisname = this.name;
+					return  function(){
+						alert("Hello " + thisname);
+					}
+				}
+			});
+			//配置修改provider对象
+			app.config(function(customProvider){
+				customProvider.name = "LGX";
+			});
+			//使用provider对象
+			app.controller("MainController",function(custom){
+				custom();
+			});
+		</script>
+	</body>
+</html>

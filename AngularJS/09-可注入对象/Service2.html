@@ -1,0 +1,29 @@
+<!doctype html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title>Service对象注入其它对象</title>
+		<script src="/angular-1.5.5/angular.js"></script>
+	</head>
+	<body>
+		<div ng-controller="MainController">
+
+		</div>
+		<script>
+			var app = angular.module('app',[]);
+			//注册一个Service对象，并注入$interval对象
+			app.service('myService',function($interval){
+				this.setInterval=function(){
+					var i = 0;
+					$interval(function(){
+						i++;
+						console.info("$interval调用了" + i + "次");
+					}, 1000);
+				}
+			});
+			app.controller("MainController",function(myService){
+				myService.setInterval();
+			});
+		</script>
+	</body>
+</html>

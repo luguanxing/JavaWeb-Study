@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title>Factory对象</title>
+		<script src="/angular-1.5.5/angular.js"></script>
+	</head>
+	<body>
+		<div ng-controller="MainController">
+
+		</div>
+		<script>
+			var app = angular.module('app',[]);
+			//注册一个factory对象
+			app.factory("myFactory",function(){
+				//和Service不同，这里是返回一个对象
+				return{
+					sayHello:function(){
+						alert("welcome to you!");
+					}
+				}
+			});
+			//注入factory对象并调用方法
+			app.controller("MainController",function(myFactory){
+				console.log(myFactory);
+				myFactory.sayHello();
+			});
+		</script>
+	</body>
+</html>

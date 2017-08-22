@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title>Value和Constant对象</title>
+		<script src="/angular-1.5.5/angular.js"></script>
+	</head>
+	<body>
+		<div ng-controller="MainController">
+		</div>
+		<script>
+			var app = angular.module('app',[]);
+			//设置Value和Constant对象
+			app.constant("version","6.6.6");
+			app.value("CONFIG","lgx.properties");
+
+			//注入Value和Constant对象并使用
+			app.controller("MainController",function(version,CONFIG){
+				console.log("app version => " + version);
+				console.log("config file => " + CONFIG);
+			});
+		</script>
+	</body>
+</html>
