@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title>controller服务中使用过滤器</title>
+		<script src="/angular-1.5.5/angular.js"></script>
+	</head>
+	<body>
+		<div ng-controller="MainController">
+			{{amount}}<br/>
+			{{date}}
+		</div>
+		<script>
+			var app = angular.module('app',[]);
+			//在controller中注入$filter服务可调用所有过滤器
+			app.controller("MainController",function($scope,$filter){
+				$scope.amount = $filter('currency')(1000123);
+				$scope.date = $filter('date')(new Date(),'yyyy年MM月dd日 HH时mm分ss秒');
+			});
+		</script>
+	</body>
+</html>
