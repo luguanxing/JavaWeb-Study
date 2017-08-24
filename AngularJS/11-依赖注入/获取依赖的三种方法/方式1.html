@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>创建依赖</title>
+	</head>
+	<body>
+		<script>
+			function AppLog() {
+				this.startInfo = function(){
+					alert("startInfo()调用成功");
+					console.info("=========应用开始启动=========");
+					console.error("=========应用启动错误=========");
+					console.info("=========应用关闭，请检查错误=========");
+				}
+			}
+			function App(){
+				this.start = function(){
+					//创建AppLog并使用
+					var log = new AppLog();
+					log.startInfo();
+				}
+			}
+			var app =new App();
+			app.start();
+		</script>
+	</body>
+</html>

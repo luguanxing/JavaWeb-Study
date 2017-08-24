@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app="appMod">
+	<head>
+		<meta charset="UTF-8">
+		<title>使用$injector服务</title>
+		<script src="/angular-1.5.5/angular.js"></script>
+	</head>
+	<body ng-controller="MainController">
+		<script>
+			var appMod = angular.module("appMod",[]);
+			
+			//注册自定义Service方法
+			appMod.service("helloService",function($http){
+				this.sayHello = function(){
+					alert("Hello,Welcome to you!");
+				}
+			});
+			
+			
+			//自定义普通方法
+			function MyFunc($http,$scope){
+				
+			}
+			
+			appMod.controller("MainController",function($injector){
+				//调用自定义Service方法
+				var helloService = $injector.get("helloService");
+				helloService.sayHello();
+				
+				//查看自定义普通方法依赖服务
+				var depends = $injector.annotate(MyFunc);
+				console.log("MyFunc依赖的服务:");
+				console.log(depends);
+				
+			});
+			
+			/*
+				其它调用自定义Service方法的方式
+				appMod.controller("MainController",function(){
+				var $injector =  angular.injector(['ng','appMod']);
+				var helloService = $injector.get("helloService");
+				helloService.sayHello();
+				});
+			*/
+		</script>
+	</body>
+</html>

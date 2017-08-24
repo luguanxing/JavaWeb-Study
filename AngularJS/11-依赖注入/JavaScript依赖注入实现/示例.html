@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>一个依赖注入的例子</title>
+	</head>
+	<body>
+		<script>
+			//对象
+			function Dog() {
+				this.cry = function(){
+					console.log("Wang Wang...");
+				}
+			}
+			function Cat(){
+				this.cry = function() {
+					console.log("Miao Miao...");
+				}
+			}
+			
+			//一个包含依赖实例(服务)的容器
+			var container = {"dog":new Dog(),"cat":new Cat()};
+
+			//要调用的目标方法
+			function Family(dog, cat) {
+				this.feed = function() {
+					dog.cry();
+					cat.cry();
+				}
+			}
+			
+			//获取要调用的目标方法的参数名
+			function getParams(func) {
+				var args = func.toString().match(/^function\s*[^\(]*\(\s*([^\)]*)\)/m);
+				console.log("要调用 => " + func.toString());
+				if (args && args.length > 1) {
+					return args[1].replace(/\s*/g, '').split(',');
+				}
+				return [];
+			};
+			
+			//根据参数名从容器获取实例加入依赖对象数组
+			var args = getParams(Family);
+			console.log("参数名为 => " + args);
+			var depends = [];
+			for (var i in args) {
+				depends[i] = container[args[i]];
+			}
+			console.log("依赖对象数组 => " + depends);
+			
+			//创建目标方法的实例
+			var family = {};
+			Family.apply(family, depends);
+			console.log("目标方法实例 => " + family);
+			family.feed();
+		</script>
+	</body>
+</html>

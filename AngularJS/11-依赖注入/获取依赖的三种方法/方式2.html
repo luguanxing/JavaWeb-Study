@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>全局依赖</title>
+	</head>
+	<body>
+		<script>
+			function AppLog() {
+				this.startInfo = function(){
+					alert("startInfo()调用成功");
+					console.info("=========应用开始启动=========");
+					console.error("=========应用启动错误=========");
+					console.info("=========应用关闭，请检查错误=========");
+				}
+			}
+			//创建全局变量appLog作为依赖
+			var appLog = new AppLog();
+			function App(){
+				this.start = function(){
+					appLog.startInfo();
+				}
+			}
+			var app =new App();
+			app.start();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+<!doctype html>
+<html ng-app="appMod">
+	<head>
+		<meta charset="UTF-8">
+		<title>数组标注依赖</title>
+		<script src="/angular-1.5.5/angular.js"></script>
+	</head>
+	<body ng-controller="MainController">
+		{{name}}
+		<script>
+			var appMod = angular.module("appMod",[]);
+			appMod.controller("MainController", ['$scope', '$http', function($scope,$http){
+				$scope.name = "luguanxing";
+			}]);
+		</script>
+	</body>
+</html>

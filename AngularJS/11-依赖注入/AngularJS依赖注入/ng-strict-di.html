@@ -1,0 +1,18 @@
+<!doctype html>
+<html ng-app="appMod" ng-strict-di>
+	<!--严格模式ng-strict-di下无法使用隐式声明依赖-->
+	<head>
+		<meta charset="UTF-8">
+		<title>严格模式</title>
+		<script src="/angular-1.5.5/angular.js"></script>
+	</head>
+	<body ng-controller="MainController">
+		{{name}}
+		<script>
+			var appMod = angular.module("appMod",[]);
+			appMod.controller("MainController",function($scope,$http){
+				$scope.name = "luguanxing";
+			});
+		</script>
+	</body>
+</html>
