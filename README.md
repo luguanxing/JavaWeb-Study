@@ -1,13 +1,5 @@
 # JavaWeb学习
 
-------
-
-> * AJAX
-> * Filter
-> * JSP
-> * Servlet
-> * Web2.0
-
-------
+![image](https://github.com/luguanxing/JavaWeb-Study/blob/master/study.jpg?raw=true)
 
 
