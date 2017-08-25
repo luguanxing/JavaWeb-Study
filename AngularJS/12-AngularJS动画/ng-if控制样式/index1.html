@@ -1,0 +1,60 @@
+<!doctype html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<title>例1</title>
+		<link rel="stylesheet" href="/bootstrap/css/bootstrap.css"/>
+		<script src="/angular-1.5.5/angular.js"></script>
+		<script src="/angular-1.5.5/angular-animate.js"></script>
+		<style>
+			.box {
+				width: 200px;
+				height: 200px;
+				background-color: #ccc;
+			}
+
+			/*显示时加上 ng-enter -> ng-enter-active 后消失*/
+			.box.ng-enter {
+				transition: 1s linear all;
+				width: 0;
+				height: 0;
+				border: 5px solid red;
+			}
+			.box.ng-enter-active {
+				transition: 1s linear all;
+				width: 200px;
+				height: 200px;
+				border: 5px solid yellow;
+			}
+
+			/*消失时加上 ng-leave -> ng-leave-active 后消失*/
+			.box.ng-leave {
+				transition: 1s linear all;
+				width: 200px;
+				height: 200px;
+				border: 5px solid blue;
+			}
+			.box.ng-leave-active {
+				transition: 1s linear all;
+				width: 0;
+				height: 0;
+				border: 5px solid green;
+			}
+		</style>
+	</head>
+	<body ng-controller="MainController">
+		<!--监视目标isShow-->
+		<div class="box" ng-if="isShow"></div>
+		<br/>
+		<div>
+			<button class="btn" ng-click="isShow=true">显示</button>&nbsp;
+			<button class="btn" ng-click="isShow=false">隐藏</button>
+		</div>
+		<script>
+			var myApp = angular.module('myApp', ['ngAnimate']);
+			myApp.controller("MainController", function ($scope) {
+				$scope.isShow = false;
+			});
+		</script>
+	</body>
+</html>

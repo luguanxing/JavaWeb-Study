@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<title>例3</title>
+		<link rel="stylesheet" href="index3.css"/>
+		<script src="/jquery/jquery-2.0.3.js"></script>
+		<script src="/angular-1.5.5/angular.js"></script>
+		<script src="/angular-1.5.5/angular-animate.js"></script>
+		<script src="index3.js"></script>
+	</head>
+	<body ng-controller="MainController">
+		<label>
+			显示/隐藏正方形: 
+			<!--使用checkbox关联isShow控制显示-->
+			<input type="checkbox" ng-model="isShow"/>
+		</label>
+		<br/>
+		<br/>
+		<!--ng-if为true时DOM出现，否则DOM消失-->
+		<div class="box showBox" ng-if="isShow"></div>
+		</div>
+	</body>
+</html>

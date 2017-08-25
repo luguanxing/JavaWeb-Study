@@ -1,0 +1,31 @@
+/*基础样式*/
+html {
+	overflow-y: hidden;
+}
+.page {
+	bottom: 0;
+	padding-top: 100px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 100%;
+}
+
+/*首页page-home*/
+.page-home {
+	background: #00D0BC;
+	color: #00907c;
+}
+
+/*关于页面page-about*/
+.page-about {
+	background: #E59400;
+	color: #a55400;
+}
+
+/*联系页面page-contact*/
+.page-contact {
+	background: #ffa6bb;
+	color: #9e0000;
+}
+
