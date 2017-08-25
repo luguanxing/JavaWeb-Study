@@ -3,6 +3,8 @@
 ------
 
 > * 01-使用jspsmartupload上传
+> * 02-使用commons-fileupload上传
+> * 03-下载文件
 
 ------
 
@@ -13,3 +15,12 @@
 使用jspsmartupload上传文件，能限制大小，自动(获取后缀)命名
 <br><br><br><br><br><br>
 
+## 02-使用commons-fileupload上传
+![image](https://github.com/luguanxing/JavaWeb-Study/blob/master/%E4%B8%8A%E4%BC%A0%E5%92%8C%E4%B8%8B%E8%BD%BD/pictures/2.gif?raw=true)<br>
+使用commons-fileupload上传文件，能限制大小，同时获取其它表单属性
+<br><br><br><br><br><br>
+
+## 03-下载文件
+![image](https://github.com/luguanxing/JavaWeb-Study/blob/master/%E4%B8%8A%E4%BC%A0%E5%92%8C%E4%B8%8B%E8%BD%BD/pictures/3.gif?raw=true)<br>
+遍历当前某个目录并提供下载，能验证文件名和解析文件下载中文名
+<br><br><br><br><br><br>
