@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 	<head>
-		<title>上传图片</title>
+		<title>上传文件</title>
 	</head>
 	<body>
 		<form action="upload" method="post" enctype="multipart/form-data">
