@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>使用Promise对象</title>
+	</head>
+	<body>
+		<script>
+			
+			//生成Promise对象，里面包含异步方法
+			var promise = new Promise(function myFunc(resolve, reject) {
+				var timeOut = Math.random();
+				console.log('timeOut = ' + timeOut);
+				setTimeout(function () {
+					if (timeOut < 0.5) {	//异步成功
+						resolve('成功');
+					}
+					else {					//异步失败
+						reject('失败');
+					}
+				}, 1000);
+			});
+
+			promise.then(function (result) {	//成功时的回调函数
+				console.log(result);
+			}).catch(function (error) {			//失败时的回调函数
+				console.log(error);
+			});
+			
+			
+		</script>
+	</body>
+</html>

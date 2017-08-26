@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Promise链式调用</title>
+	</head>
+	<body>
+		<script>
+
+			function test1(input) {
+				return new Promise(function (resolve, reject) {
+					if (input > 0) {
+						console.log("测试1成功，是正数");
+						setTimeout(resolve, 500, input);
+					} else {
+						reject("测试1失败，不是正数");
+					}
+				})
+			}
+
+			function test2(input) {
+				return new Promise(function (resolve, reject) {
+					if (input > 1) {
+						reject("测试2失败，大于1");
+					} else {
+						console.log("测试2成功，小于1");
+						setTimeout(resolve, 500, input);
+					}
+				})
+			}
+
+			function test3(input) {
+				return new Promise(function (resolve, reject) {
+					if (input >= 0.5) {
+						console.log("测试3成功，大于0.5");
+						setTimeout(resolve, 500, input);
+					} else {
+						reject("测试3失败，小于0.5");
+					}
+				})
+			}
+
+			var test = new Promise(function (resolve, reject) {
+				console.log('开始进行测试，生成[-1,2)之间的数字，只有[0.5,1]之间才成功');
+				var rand = Math.random() * 3 - 1;
+				console.log("rand = " + rand);
+				resolve(rand);
+			});
+			
+			test.then(test1)
+				.then(test2)
+				.then(test3)
+				.then(function (input) {
+					console.log(input + "通过所有测试");
+				})
+				.catch(function (error) {
+					console.log(error);
+				})
+
+		</script>
+	</body>
+</html>

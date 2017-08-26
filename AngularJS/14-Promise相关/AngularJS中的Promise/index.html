@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<title>AngularJS中的Promise</title>
+		<script src="/angular-1.5.5/angular.js"></script>
+	</head>
+	<body>
+		<div ng-controller="MainController">
+			<div>结果：{{result}}</div>
+			<div>执行时间：{{totalTime}}</div>
+			<div>{{failure}}</div>
+		</div>
+		<script>
+			var app = angular.module("app", []);
+			app.controller("MainController", function($scope,$q) {
+				
+				//将add方法变成Promise对象
+				function add(x,y){
+					var q = $q.defer();			//将异步方法关联成Promise对象
+					setTimeout(function() {
+						var result = x + y;
+						if(result >= 0) {		//异步执行成功
+							q.resolve(result);
+						} else {				//异步执行失败
+							q.reject('negatvie value:' + result);
+						}
+					},300);
+					return q.promise;			//返回Promise对象
+				}
+				
+				var startTime = Date.now();
+				var promise = add(20, 30);
+				promise.then(function(result){
+					return add(result, 40);
+				}).then(function(result){
+					$scope.result = result;
+				}).catch(function(failure){
+					$scope.failure = failure;
+				}).finally(function(){
+					var endTime = Date.now();
+					$scope.totalTime = endTime - startTime;
+				});
+			});
+		</script>
+	</body>
+</html>
