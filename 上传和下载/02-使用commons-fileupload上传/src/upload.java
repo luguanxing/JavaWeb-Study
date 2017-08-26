@@ -49,10 +49,14 @@ public class upload extends HttpServlet {
 					//获取大小限制
 					long filesize = fileItem.getSize();
 					writer.println("文件大小 =>" + filesize + "<br/>");
-					if (filesize == 0)
+					if (filesize == 0) {
+						fileItem.delete();	//删除临时文件
 						throw new Exception("文件不存在");
-					if (filesize > 20000)
+					}
+					if (filesize > 20000) {
+						fileItem.delete();
 						throw new Exception("文件太大");
+					}
 					writer.println("<br/><br/><br/>");
 					
 					
