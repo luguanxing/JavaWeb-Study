@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<title>饼状图</title>
+		<script src="/angular-1.5.5/angular.js"></script>
+		<script src="/angular-extends/ng-chart/Chart.js"></script>
+		<script src="/angular-extends/ng-chart/angular-chart.js"></script>
+	</head>
+	<body>
+		<div ng-controller="NgChartController">
+			<canvas id="pie" class="chart chart-pie"
+					chart-data="data" chart-labels="labels">
+			</canvas>
+		</div>
+		<script>
+			var myApp = angular.module("myApp", ['chart.js']);
+			myApp.controller("NgChartController",function($scope){
+				//每个饼块的意义
+				$scope.labels = ["陆军", "海军", "空军"];
+
+				//每个饼块的数值大小
+				$scope.data = [70, 11, 19];
+			});
+		</script>
+	</body>
+</html>
