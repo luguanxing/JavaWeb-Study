@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<script src="/js/jquery-3.2.0.js" type="text/javascript"></script>
+		<script src="/js/index.js" type="text/javascript"></script>
+		<title>AJAX验证码</title>
+	</head>
+	<body>
+
+		<div>
+			<input type="text" id="input" />
+			<img id="captcha" src="/getCaptcha" onclick="changeCaptcha()" style="top:5px; cursor:pointer; position:relative;" />
+		</div>
+
+		<div style="margin-top: 10px;">
+			<button onclick="checkCaptcha()">检查</button>
+			<span id="result"></span>
+		</div>
+		
+
+	</body>
+</html>
