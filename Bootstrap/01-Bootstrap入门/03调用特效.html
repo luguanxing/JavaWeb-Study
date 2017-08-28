@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
+		<title>调用Bootstrap特效</title>
+		<script src="/js/jquery.js"></script>
+		<script src="/bootstrap/js/bootstrap.js"></script>
+	</head>
+	<body>
+		
+		<!-- href属性的值要和后面tab-pane中的id值对应 -->
+		<ul class="nav nav-tabs" id="myTab">
+			<li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+			<li><a href="#news" data-toggle="tab">News</a></li>
+			<li><a href="#blog" data-toggle="tab">Blog</a></li>
+			<li><a href="#about" data-toggle="tab">About</a></li>
+		</ul>
+
+		<!-- id值值要和前面href属性中的对应 -->
+		<div class="tab-content">
+			<div class="tab-pane active" id="home">Home Page</div><!--tab标签对应的内容-->
+			<div class="tab-pane" id="news">News Page</div>
+			<div class="tab-pane" id="blog">Blog Page</div>
+			<div class="tab-pane" id="about">About Page</div>
+		</div>
+		
+	</body>
+</html>
