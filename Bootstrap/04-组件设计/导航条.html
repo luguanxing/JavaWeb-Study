@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link href="/cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="/assets/css/docs.css" rel="stylesheet">
+		<title>导航条</title>
+		<script src="/js/jquery.js"></script>
+		<script src="/bootstrap/js/bootstrap.js"></script>
+		<style rel="stylesheet">
+			.container {
+				border: 5px solid #2b6d8e;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				padding: 14px;
+				border-radius: 5%;
+				box-shadow: 0px 5px 0px #2b6d8e;
+			}
+			.bs-docs-example {
+
+			}
+		</style>
+	</head>
+	<body data-spy="scroll" data-target=".bs-docs-sidebar">
+		
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>Bootstrap组件 - 表单导航条</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<a class="brand" href="#">提交</a>
+						<form class="navbar-form pull-left">
+							<input type="text" class="span2">
+							<button type="submit" class="btn">Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="bs-docs-example">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<a class="brand" href="#">搜索</a>
+						<form class="navbar-search pull-left">
+							<input type="text" class="search-query" placeholder="Search">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>Bootstrap组件 - 响应式导航条</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				<div class="navbar">
+					<div class="navbar-inner">
+						<div class="container">
+							<a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</a>
+							<a class="brand" href="#">响应式导航条</a>
+							<div class="nav-collapse collapse navbar-responsive-collapse">
+								<ul class="nav">
+									<li class="active"><a href="#">首页</a></li>
+									<li><a href="#">导航条</a></li>
+									<li class="dropdown">
+										<a href="#" class="dropdown-toggle" data-toggle="dropdown">下拉导航条<b class="caret"></b></a>
+										<ul class="dropdown-menu">
+											<li><a href="#">导航条</a></li>
+											<li><a href="#">导航条</a></li>
+											<li class="divider"></li>
+											<li class="nav-header">导航条</li>
+											<li><a href="#">导航条</a></li>
+										</ul>
+									</li>
+								</ul>
+								<form class="navbar-search pull-left" action="">
+									<input type="text" class="search-query span2" placeholder="Search">
+								</form>
+							</div><!-- /.nav-collapse -->
+						</div>
+					</div><!-- /navbar-inner -->
+				</div><!-- /navbar -->
+			</div>
+		</div>
+		
+	</body>
+</html>

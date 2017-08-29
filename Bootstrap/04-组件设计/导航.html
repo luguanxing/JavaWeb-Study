@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link href="/cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="/assets/css/docs.css" rel="stylesheet">
+		<title>导航</title>
+		<script src="/js/jquery.js"></script>
+		<script src="/bootstrap/js/bootstrap.js"></script>
+		<style rel="stylesheet">
+			.container {
+				border: 5px solid #2b6d8e;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				padding: 14px;
+				border-radius: 5%;
+				box-shadow: 0px 5px 0px #2b6d8e;
+			}
+			.bs-docs-example {
+
+			}
+		</style>
+	</head>
+	<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>Bootstrap组件 - 默认标签导航</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#">首页</a></li>
+					<li><a href="#">新闻</a></li>
+					<li><a href="#">财经</a></li>
+					<li><a href="#">体育</a></li>
+					<li><a href="#">论坛</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>Bootstrap组件 - 堆叠式标签导航</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				<ul class="nav nav-tabs nav-stacked">
+					<li class="active"><a href="#">首页</a></li>
+					<li><a href="#">新闻</a></li>
+					<li><a href="#">财经</a></li>
+					<li><a href="#">体育</a></li>
+					<li><a href="#">论坛</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>Bootstrap组件 - 下拉菜单式标签导航</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				<ul class="nav nav-tabs">
+					<li class="active"><a href="#">首页</a></li>
+					<li><a href="#">新闻</a></li>
+					<li><a href="#">财经</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">体育 <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">足球</a></li>
+							<li><a href="#">篮球</a></li>
+							<li><a href="#">排球</a></li>
+							<li class="divider"></li>
+							<li><a href="#">游泳</a></li>
+						</ul>
+					</li>
+					<li><a href="#">论坛</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>Bootstrap组件 - 导航列表</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				<div class="well" style="max-width: 320px; padding: 4px;">
+					<ul class="nav nav-list">
+						<li class="nav-header">新闻</li>
+						<li class="active"><a href="#">财经</a></li>
+						<li><a href="#">军事</a></li>
+						<li><a href="#">娱乐</a></li>
+						<li class="nav-header">体育</li>
+						<li><a href="#">足球</a></li>
+						<li><a href="#">篮球</a></li>
+						<li class="divider"></li>
+						<li><a href="#">排球</a></li>
+					</ul>
+				</div> <!-- /well -->
+			</div>
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>Bootstrap组件 - 标签页式导航</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				<div class="tabbable" style="margin-bottom: 8px;">
+					<ul class="nav nav-tabs">
+						<li class="active"><a href="#tab1" data-toggle="tab">新闻</a></li>
+						<li><a href="#tab2" data-toggle="tab">财经</a></li>
+						<li><a href="#tab3" data-toggle="tab">体育</a></li>
+						<li><a href="#tab4" data-toggle="tab">娱乐</a></li>
+						<li><a href="#tab5" data-toggle="tab">论坛</a></li>
+					</ul>
+					<div class="tab-content" style="padding-bottom: 9px; border-bottom: 1px solid #ddd;">
+						<div class="tab-pane active" id="tab1">
+							<p>新闻标签页.</p>
+						</div>
+						<div class="tab-pane" id="tab2">
+							<p>财经标签页.</p>
+						</div>
+						<div class="tab-pane" id="tab3">
+							<p>体育标签页.</p>
+						</div>
+						<div class="tab-pane" id="tab4">
+							<p>娱乐标签页.</p>
+						</div>
+						<div class="tab-pane" id="tab5">
+							<p>论坛标签页.</p>
+						</div>
+					</div>
+				</div> <!-- /tabbable -->
+			</div>
+		</div>
+		
+		
+	</body>
+</html>

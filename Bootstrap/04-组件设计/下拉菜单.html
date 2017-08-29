@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link href="/cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="/assets/css/docs.css" rel="stylesheet">
+		<title>下拉菜单</title>
+		<script src="/js/jquery.js"></script>
+		<script src="/bootstrap/js/bootstrap.js"></script>
+		<style rel="stylesheet">
+			.container {
+				border: 5px solid #2b6d8e;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				padding: 14px;
+				border-radius: 5%;
+				box-shadow: 0px 5px 0px #2b6d8e;
+			}
+			.bs-docs-example {
+				
+			}
+		</style>
+	</head>
+	<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>Bootstrap组件 - 下拉菜单</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				<div class="dropdown clearfix">
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+						<li><a tabindex="-1" href="#">下拉菜单A</a></li>
+						<li><a tabindex="-1" href="#">下拉菜单B</a></li>
+						<li><a tabindex="-1" href="#">下拉菜单C</a></li>
+						<li class="divider"></li>
+						<li><a tabindex="-1" href="#">下拉菜单分割线D</a></li>
+						<li><a tabindex="-1" href="#">下拉菜单分割线E</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>Bootstrap组件 - 下拉菜单对齐方式</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				<div class="dropdown clearfix">
+					<ul class="dropdown-menu pull-left" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+						<li><a tabindex="-1" href="#">左对齐下拉菜单A</a></li>
+						<li><a tabindex="-1" href="#">左对齐下拉菜单B</a></li>
+						<li class="divider"></li>
+						<li><a tabindex="-1" href="#">左对齐下拉菜单分割线C</a></li>
+					</ul>
+				</div>
+				<div class="dropdown clearfix">
+					<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+						<li><a tabindex="-1" href="#">右对齐下拉菜单A</a></li>
+						<li><a tabindex="-1" href="#">右对齐下拉菜单B</a></li>
+						<li class="divider"></li>
+						<li><a tabindex="-1" href="#">右对齐下拉菜单分割线C</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>Bootstrap组件 - 默认子下拉菜单</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				<div class="dropdown clearfix">
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+						<li><a tabindex="-1" href="#">下拉菜单A</a></li>
+						<li><a tabindex="-1" href="#">下拉菜单B</a></li>
+						<li class="divider"></li>
+						<li class="dropdown-submenu">
+							<a tabindex="-1" href="#">弹出子下拉菜单</a>
+							<ul class="dropdown-menu">
+								<li><a tabindex="-1" href="#">子下拉菜单A</a></li>
+								<li><a tabindex="-1" href="#">子下拉菜单B</a></li>
+								<li><a tabindex="-1" href="#">子下拉菜单C</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>Bootstrap组件 - 向左弹出子下拉菜单</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				<div class="dropdown clearfix">
+					<ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+						<li><a tabindex="-1" href="#">下拉菜单A</a></li>
+						<li><a tabindex="-1" href="#">下拉菜单B</a></li>
+						<li class="divider"></li>
+						<li class="dropdown-submenu pull-left">
+							<a tabindex="-1" href="#">向左弹出子下拉菜单</a>
+							<ul class="dropdown-menu">
+								<li><a tabindex="-1" href="#">子下拉菜单A</a></li>
+								<li><a tabindex="-1" href="#">子下拉菜单B</a></li>
+								<li><a tabindex="-1" href="#">子下拉菜单C</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>Bootstrap组件 - 下拉菜单禁用</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				<div class="dropdown clearfix">
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
+						<li><a tabindex="-1" href="#">下拉菜单A</a></li>
+						<li class="disabled"><a tabindex="-1" href="#">下拉菜单B</a></li>
+						<li><a tabindex="-1" href="#">下拉菜单C</a></li>
+						<li class="divider"></li>
+						<li class="disabled"><a tabindex="-1" href="#">下拉菜单分割线D</a></li>
+						<li><a tabindex="-1" href="#">下拉菜单分割线E</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>
