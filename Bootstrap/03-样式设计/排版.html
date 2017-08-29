@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<link href="/cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
+		<link href="/cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="/assets/css/docs.css" rel="stylesheet">
+		<title>排版</title>
+		<script src="/js/jquery.js"></script>
+		<script src="/bootstrap/js/bootstrap.js"></script>
+		<style rel="stylesheet">
+			.container {
+				border: 5px solid #2b6d8e;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				padding: 14px;
+				border-radius: 5%;
+				box-shadow: 0px 5px 0px #2b6d8e;
+			}
+			.bs-docs-example {
+				
+			}
+		</style>
+	</head>
+	<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>基本CSS样式 - 标题与副标题</h3>
+				</div>
+			</section>
+			<div class="bs-example bs-example-type">
+				<table class="table">
+					<tbody>
+						<tr>
+							<td>
+								<h1>h1. Bootstrap heading
+									<small>Secondary text</small>
+								</h1>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h2>h2. Bootstrap heading
+									<small>Secondary text</small>
+								</h2>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h3>h3. Bootstrap heading
+									<small>Secondary text</small>
+								</h3>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h4>h4. Bootstrap heading
+									<small>Secondary text</small>
+								</h4>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h5>h5. Bootstrap heading
+									<small>Secondary text</small>
+								</h5>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<h6>h6. Bootstrap heading
+									<small>Secondary text</small>
+								</h6>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>基本CSS样式 - 页面主体</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				<p>Bootstrap框架默认将全局的字体大小设置为14px，行高度设置为20px，并且这些属性会直接赋予<body>中的元素和所有段落元素。</p>
+				<p>此外，段落元素还被设置了等于0.5倍行高（即10px）的底部外边距（margin）；同时，通过添加.lead类可以让段落突出显示。</p>
+			</div>
+			<div class="bs-docs-example">
+				<p class="lead">通过添加 <code>.lead</code> 让段落突出显示</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>基本CSS样式 - 强调样式</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				<p><strong>用增加font-weight值的方式加粗强调一段文本</strong>.</p>
+			</div>
+			<div class="bs-docs-example">
+				<p><em>还可以用斜体字强调一段文本</em>.</p>
+			</div>
+			<div class="bs-docs-example">
+				<p><small>对于不需要强调的inline或block类型的文本使用small标签</small>.</p>
+			</div>
+			<div class="bs-docs-example">
+				<p><strong>通过对齐方式也可以强调一段文本</strong>.</p>
+				<p class="text-left">左对齐文字</p>
+				<p class="text-center">中间对齐文字</p>
+				<p class="text-right">右侧对齐文字</p>
+			</div>
+			<div class="bs-docs-example">
+				<p><strong>通过工具类使用颜色来强调不同类别文本</strong>.</p>
+				<p class="muted">This is muted text by '.muted' class.</p>
+				<p class="text-warning">This is warning text by '.text-warning' class.</p>
+				<p class="text-error">This is error text by '.text-error' class.</p>
+				<p class="text-info">This is info text by '.text-info' class.</p>
+				<p class="text-success">This is success text by '.text-success' class.</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>基本CSS样式 - 缩略语</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				<p>当把鼠标悬停在缩略语<abbr title="abbreviation">abbr</abbr>标签上需要看到完整文本内容就要使用title属性.</p>
+			</div>
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>基本CSS样式 - 引用</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				<blockquote>
+					<p>在标准的引用里,可以很简单的改变风格和内容.</p>
+					<p>添加small标签来注明引用来源,来源名称可以放在cite标签里面.</p>
+					<small>Cite in <cite title="Bootstrap Inc.">bootstrap.com</cite></small>
+				</blockquote>
+			</div>
+			<div>
+				<blockquote class="pull-right">
+					<p>在标准的引用里,可以很简单的改变风格和内容.</p>
+					<p>添加small标签来注明引用来源,来源名称可以放在cite标签里面.</p>
+					<small>Cite in <cite title="Bootstrap Inc.">bootstrap.com</cite></small>
+				</blockquote>
+			</div>
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>基本CSS样式 - 列表(有序列表)</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				<ol>
+					<li>Tom</li>
+					<li>Jack</li>
+					<li>Sub List
+						<ul>
+							<li>Football</li>
+							<li>NBA</li>
+							<li>Baseball</li>
+						</ul>
+					</li>
+					<li>123.com</li>
+					<li>abc.com</li>
+				</ol>
+			</div>
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>基本CSS样式 - 列表(无序列表)</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				<ul>
+					<li>Tom</li>
+					<li>Jack</li>
+					<li>Sub List
+						<ul>
+							<li>Football</li>
+							<li>NBA</li>
+							<li>Baseball</li>
+						</ul>
+					</li>
+					<li>123.com</li>
+					<li>abc.com</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>基本CSS样式 - 列表(无样式列表)</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				<ul class="unstyled">
+					<li>Tom</li>
+					<li>Jack</li>
+					<li>Sub List
+						<ul>
+							<li>Football</li>
+							<li>NBA</li>
+							<li>Baseball</li>
+						</ul>
+					</li>
+					<li>123.com</li>
+					<li>abc.com</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>基本CSS样式 - 默认描述样式</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				<dl>
+					<dt>Bootstrap</dt>
+					<dd>Bootstrap is a CSS framework.</dd>
+					<dt>CSS</dt>
+					<dd>CSS is Cascading Style Sheet.</dd>
+					<dd>CSS 3 is the updated version.</dd>
+					<dt>HTML 5</dt>
+					<dd>HTML 5, CSS & Bootstrap is powerful web tools.</dd>
+				</dl>
+			</div>
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>基本CSS样式 - 水平描述样式</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				<dl class="dl-horizontal">
+					<dt>Bootstrap</dt>
+					<dd>Bootstrap is a CSS framework.</dd>
+					<dt>CSS</dt>
+					<dd>CSS is Cascading Style Sheet.</dd>
+					<dd>CSS 3 is the updated version.</dd>
+					<dt>HTML 5</dt>
+					<dd>HTML 5, CSS & Bootstrap....</dd>
+				</dl>
+			</div>
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>基本CSS样式 - 代码(内联式)</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				inline code: <code>alert('this is inline code.')</code>.
+			</div>
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h3>基本CSS样式 - 基本代码块</h3>
+				</div>
+			</section>
+			<div class="bs-docs-example">
+				pre code: <pre>var i=1;<br>var j=2;<br>alert(i+j);</pre>
+			</div>-
+			<div class="bs-docs-example">
+				<pre class="prettyprint linenums" style="margin-bottom: 4px;">var i=1;<br>var j=2;<br>alert(i+j);</pre>
+			</div>
+			<div class="bs-docs-example">
+				<pre class="pre-scrollable">var i=1;<br>var j=2;<br>alert(i+j);<br>var i=1;<br>var j=2;<br>alert(i+j);<br>var i=1;<br>var j=2;<br>alert(i+j);<br>var i=1;<br>var j=2;<br>alert(i+j);<br>var i=1;<br>var j=2;<br>alert(i+j);<br>var i=1;<br>var j=2;<br>alert(i+j);<br></pre>
+			</div>
+		</div>
+		
+	</body>
+</html>
