@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>下拉菜单</title>
+		<link href="cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+		<link href="data:text/css;charset=utf-8," data-href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">
+		<link href="assets/css/patch.css" rel="stylesheet">
+		<link href="assets/css/docs.min.css" rel="stylesheet">
+		<script src="assets/js/ie8-responsive-file-warning.js"></script>
+		<script src="assets/js/ie-emulation-modes-warning.js"></script>
+		<script src="cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="icon" href="favicon.ico">
+		<script src="cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+		<script src="cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<script src="assets/js/docs.min.js"></script>
+		<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+		<style rel="stylesheet">
+			.container {
+				border: 5px solid #2b6d8e;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				padding: 14px;
+				border-radius: 5%;
+				box-shadow: 0px 5px 0px #2b6d8e;
+			}
+			.bs-docs-example {
+
+			}
+		</style>
+	</head>
+	<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h4>Bootstrap JavaScript 插件 - 下拉菜单</h4>
+				</div>
+			</section>
+			<div class="bs-example">
+				<nav id="navbar-example" class="navbar navbar-default navbar-static" role="navigation">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-collapse">
+								<span class="sr-only">Toggle Nav</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<a class="navbar-brand" href="#">下拉菜单</a>
+						</div>
+						<div class="collapse navbar-collapse bs-example-js-navbar-collapse">
+							<ul class="nav navbar-nav">
+								<li class="dropdown">
+									<a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										下拉菜单A
+										<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+										<li role="presentation"><a role="menuitem" tabindex="-1">下拉菜单1</a></li>
+										<li role="presentation"><a role="menuitem" tabindex="-1">下拉菜单2</a></li>
+										<li role="presentation" class="divider"></li>
+										<li role="presentation"><a role="menuitem" tabindex="-1">下拉菜单3</a></li>
+									</ul>
+								</li>
+								<li class="dropdown">
+									<a id="drop2" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										下拉菜单B
+										<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu" aria-labelledby="drop2">
+										<li role="presentation"><a role="menuitem" tabindex="-1">下拉菜单1</a></li>
+										<li role="presentation"><a role="menuitem" tabindex="-1">下拉菜单2</a></li>
+										<li role="presentation" class="divider"></li>
+										<li role="presentation"><a role="menuitem" tabindex="-1">下拉菜单3</a></li>
+									</ul>
+								</li>
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								<li id="fat-menu" class="dropdown">
+									<a id="drop3" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+										下拉菜单Z
+										<span class="caret"></span>
+									</a>
+									<ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+										<li role="presentation"><a role="menuitem" tabindex="-1">下拉菜单1</a></li>
+										<li role="presentation"><a role="menuitem" tabindex="-1">下拉菜单2</a></li>
+										<li role="presentation" class="divider"></li>
+										<li role="presentation"><a role="menuitem" tabindex="-1">下拉菜单3</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div><!-- /.nav-collapse -->
+					</div><!-- /.container-fluid -->
+				</nav> <!-- /navbar-example -->
+			</div> <!-- /example -->
+		</div>
+
+
+	</body>
+</html>

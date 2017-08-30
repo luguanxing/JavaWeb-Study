@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>按钮</title>
+		<link href="cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+		<link href="data:text/css;charset=utf-8," data-href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">
+		<link href="assets/css/patch.css" rel="stylesheet">
+		<link href="assets/css/docs.min.css" rel="stylesheet">
+		<script src="assets/js/ie8-responsive-file-warning.js"></script>
+		<script src="assets/js/ie-emulation-modes-warning.js"></script>
+		<script src="cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="icon" href="favicon.ico">
+		<script src="cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+		<script src="cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<script src="assets/js/docs.min.js"></script>
+		<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+		<style rel="stylesheet">
+			.container {
+				border: 5px solid #2b6d8e;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				padding: 14px;
+				border-radius: 5%;
+				box-shadow: 0px 5px 0px #2b6d8e;
+			}
+			.bs-docs-example {
+
+			}
+		</style>
+	</head>
+	<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h4>Bootstrap JavaScript 插件 - 状态按钮</h4>
+				</div>
+			</section>
+			<div class="bs-example">
+				<button type="button" id="loading-example-btn" data-loading-text="加载中..." class="btn btn-primary" autocomplete="off">
+					测试状态按钮
+				</button>
+				<span id="id-span-info"></span>
+			</div><!-- /example -->
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h4>Bootstrap JavaScript 插件 - 复选按钮</h4>
+				</div>
+			</section>
+			<div class="bs-example">
+				<div class="btn-group" data-toggle="buttons">
+					<label class="btn btn-primary active">
+						<input type="checkbox" checked autocomplete="off">复选按钮1 (checked)
+					</label>
+					<label class="btn btn-primary">
+						<input type="checkbox" autocomplete="off">复选按钮2
+					</label>
+					<label class="btn btn-primary">
+						<input type="checkbox" autocomplete="off">复选按钮3
+					</label>
+				</div>
+			</div><!-- /example -->
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h4>Bootstrap JavaScript 插件 - 单选按钮</h4>
+				</div>
+			</section>
+			<div class="bs-example">
+				<div class="btn-group" data-toggle="buttons">
+					<label class="btn btn-primary active">
+						<input type="radio" name="options" id="option1" autocomplete="off" checked>单选按钮1 (checked)
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="options" id="option2" autocomplete="off">单选按钮2
+					</label>
+					<label class="btn btn-primary">
+						<input type="radio" name="options" id="option3" autocomplete="off">单选按钮3
+					</label>
+				</div>
+			</div><!-- /example -->
+		</div>
+
+	</body>
+</html>

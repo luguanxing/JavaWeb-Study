@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>可切换标签页</title>
+		<link href="cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+		<link href="data:text/css;charset=utf-8," data-href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">
+		<link href="assets/css/patch.css" rel="stylesheet">
+		<link href="assets/css/docs.min.css" rel="stylesheet">
+		<script src="assets/js/ie8-responsive-file-warning.js"></script>
+		<script src="assets/js/ie-emulation-modes-warning.js"></script>
+		<script src="cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="icon" href="favicon.ico">
+		<script src="cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+		<script src="cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<script src="assets/js/docs.min.js"></script>
+		<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+		<style rel="stylesheet">
+			.container {
+				border: 5px solid #2b6d8e;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				padding: 14px;
+				border-radius: 5%;
+				box-shadow: 0px 5px 0px #2b6d8e;
+			}
+			.bs-docs-example {
+
+			}
+		</style>
+	</head>
+	<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h4>Bootstrap JavaScript 插件 - 可切换式标签页</h4>
+				</div>
+			</section>
+			<div class="bs-example bs-example-tabs">
+				<ul id="navTab" class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" aria-controls="home" aria-expanded="true">主页</a></li>
+					<li role="presentation"><a href="#news" role="tab" id="news-tab" data-toggle="tab" aria-controls="news">新闻</a></li>
+					<li role="presentation" class="dropdown">
+						<a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown" aria-controls="myTabDrop1-contents">下拉菜单<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1" id="myTabDrop1-contents">
+							<li><a href="#dropdown1" tabindex="-1" role="tab" id="dropdown1-tab" data-toggle="tab" aria-controls="dropdown1">@设置</a></li>
+							<li><a href="#dropdown2" tabindex="-1" role="tab" id="dropdown2-tab" data-toggle="tab" aria-controls="dropdown2">@定制</a></li>
+							<li class="divider"></li>
+							<li><a href="#dropdown3" tabindex="-1" role="tab" id="dropdown3-tab" data-toggle="tab" aria-controls="dropdown3">@关于</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledBy="home-tab">
+						<p>主页标签页</p>
+						<p>主页标签页</p>
+						<p>主页标签页</p>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="news" aria-labelledBy="profile-tab">
+						<p>新闻标签页</p>
+						<p>新闻标签页</p>
+						<p>新闻标签页</p>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="dropdown1" aria-labelledBy="dropdown1-tab">
+						<p>设置标签页</p>
+						<p>设置标签页</p>
+						<p>设置标签页</p>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="dropdown2" aria-labelledBy="dropdown2-tab">
+						<p>定制标签页</p>
+						<p>定制标签页</p>
+						<p>定制标签页</p>
+					</div>
+					<div role="tabpanel" class="tab-pane fade" id="dropdown3" aria-labelledBy="dropdown3-tab">
+						<p>关于</p>
+						<p>关于</p>
+						<p>关于</p>
+					</div>
+				</div>
+			</div><!-- /example -->
+		</div>
+
+
+	</body>
+</html>

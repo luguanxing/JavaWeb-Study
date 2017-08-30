@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>提示框</title>
+		<link href="cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+		<link href="data:text/css;charset=utf-8," data-href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap-theme.min.css" rel="stylesheet" id="bs-theme-stylesheet">
+		<link href="assets/css/patch.css" rel="stylesheet">
+		<link href="assets/css/docs.min.css" rel="stylesheet">
+		<script src="assets/js/ie8-responsive-file-warning.js"></script>
+		<script src="assets/js/ie-emulation-modes-warning.js"></script>
+		<script src="cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">
+		<link rel="icon" href="favicon.ico">
+		<script src="cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+		<script src="cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+		<script src="assets/js/docs.min.js"></script>
+		<script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+		<style rel="stylesheet">
+			.container {
+				border: 5px solid #2b6d8e;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				padding: 14px;
+				border-radius: 5%;
+				box-shadow: 0px 5px 0px #2b6d8e;
+			}
+			.bs-docs-example {
+
+			}
+		</style>
+	</head>
+	<body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h4>Bootstrap JavaScript 插件 - 工具提示框(静态)</h4>
+				</div>
+			</section>
+			<div class="bs-example bs-example-tooltip">
+				<div class="tooltip left" role="tooltip">
+					<div class="tooltip-arrow"></div>
+					<div class="tooltip-inner">
+						左侧工具提示框
+					</div>
+				</div>
+				<div class="tooltip top" role="tooltip">
+					<div class="tooltip-arrow"></div>
+					<div class="tooltip-inner">
+						上侧工具提示框
+					</div>
+				</div>
+				<div class="tooltip right" role="tooltip">
+					<div class="tooltip-arrow"></div>
+					<div class="tooltip-inner">
+						右侧工具提示框
+					</div>
+				</div>
+				<div class="tooltip bottom" role="tooltip">
+					<div class="tooltip-arrow"></div>
+					<div class="tooltip-inner">
+						下侧工具提示框
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h4>Bootstrap JavaScript 插件 - 工具提示框(动态)</h4>
+				</div>
+			</section>
+			<div class="bs-example tooltip-demo">
+				<div class="bs-example-tooltips">
+					<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="左侧工具提示框">左侧工具提示框</button>
+					<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="上侧工具提示框">上侧工具提示框</button>
+					<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="右侧工具提示框">右侧工具提示框</button>
+					<button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="下侧工具提示框">下侧工具提示框</button>
+				</div>
+			</div><!-- /example -->
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h4>Bootstrap JavaScript 插件 - 弹出框(静态)</h4>
+				</div>
+			</section>
+			<div class="bs-example bs-example-popover">
+				<div class="popover left">
+					<div class="arrow"></div>
+					<h3 class="popover-title">向左弹出框(静态)</h3>
+					<div class="popover-content">
+						<p>这是一个向左弹出框(静态).</p>
+					</div>
+				</div>
+				<div class="popover top">
+					<div class="arrow"></div>
+					<h3 class="popover-title">向上弹出框(静态)</h3>
+					<div class="popover-content">
+						<p>这是一个向上弹出框(静态).</p>
+					</div>
+				</div>
+				<div class="popover right">
+					<div class="arrow"></div>
+					<h3 class="popover-title">向右弹出框(静态)</h3>
+					<div class="popover-content">
+						<p>这是一个向右弹出框(静态).</p>
+					</div>
+				</div>
+				<div class="popover bottom">
+					<div class="arrow"></div>
+					<h3 class="popover-title">向下弹出框(静态)</h3>
+					<div class="popover-content">
+						<p>这是一个向下弹出框(静态).</p>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h4>Bootstrap JavaScript 插件 - 弹出框(动态)</h4>
+				</div>
+			</section>
+			<div class="bs-example popover-demo">
+				<div class="bs-example-popovers">
+					<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="right" data-content="这是一个向右弹出框(动态).">
+						向右弹出框(动态)
+					</button>
+					<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="top" data-content="这是一个向上弹出框(动态).">
+						向上弹出框(动态)
+					</button>
+					<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="bottom" data-content="这是一个向下弹出框(动态).">
+						向下弹出框(动态)
+					</button>
+					<button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="这是一个向左弹出框(动态).">
+						向左弹出框(动态)
+					</button>
+				</div>
+			</div><!-- /example -->
+		</div>
+
+		<div class="container">
+			<section id="global">
+				<div class="page-header">
+					<h4>Bootstrap JavaScript 插件 - 警告框</h4>
+				</div>
+			</section>
+			<div class="bs-example bs-example-standalone">
+				<div class="alert alert-warning alert-dismissible fade in" role="alert">
+					<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<strong>Alert!</strong> 这是一个警告框.
+				</div>
+				<div class="alert alert-danger alert-dismissible fade in" role="alert">
+					<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+					<h4>Danger!</h4>
+					<p>系统提示该操作具有危险性.</p>
+					<p>
+						<button type="button" class="btn btn-danger">确定</button>
+						<button type="button" class="btn btn-default">取消</button>
+					</p>
+				</div>
+			</div><!-- /example -->
+		</div>
+
+		
+	</body>
+</html>
