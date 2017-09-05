@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>jQuery Mobile & Bootstrap</title>
+		<link rel="stylesheet" href="themes/Bootstrap.css">
+		<link rel="stylesheet" href="code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		<script src="code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+	</head>
+	<body>
+		<div data-role="page" data-theme="a">
+			<div data-role="header" data-position="inline">
+				<h1>jQuery Mobile & Bootstrap</h1>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="index.html" data-icon="home">主页</a></li>
+						<li><a href="buttons.html" data-icon="star">按钮</a></li>
+						<li><a href="listviews.html" data-icon="grid">列表</a></li>
+						<li><a href="nav.html" data-icon="search">导航</a></li>
+						<li><a href="forms.html" data-icon="gear" class="ui-btn-active">表单</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content" data-theme="a">
+				<h2>表单（Forms）--- 下拉菜单</h2><br><br><br>
+				<form action="#" method="get">
+					<div data-role="fieldcontain">
+						<label for="select-choice-a" class="select">下拉菜单：</label>
+						<select name="select-choice-a" id="select-choice-a" data-native-menu="false">
+							<option>选择编程语言</option>
+							<option value="bootstrap">Bootstrap</option>
+							<option value="jqury">jQuery</option>
+							<option value="jquerymobile">jQuery Mobile</option>
+						</select>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

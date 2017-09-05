@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<title>jQuery Mobile & Bootstrap</title>
+		<link rel="stylesheet" href="themes/Bootstrap.css">
+		<link rel="stylesheet" href="code.jquery.com/mobile/1.4.0/jquery.mobile.structure-1.4.0.min.css" />
+		<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+		<script src="code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="code.jquery.com/mobile/1.4.0/jquery.mobile-1.4.0.min.js"></script>
+	</head>
+	<body>
+		<div data-role="page" data-theme="a">
+			<div data-role="header" data-position="inline">
+				<h1>jQuery Mobile & Bootstrap</h1>
+				<div data-role="navbar">
+					<ul>
+						<li><a href="index.html" data-icon="home">主页</a></li>
+						<li><a href="buttons.html" data-icon="star">按钮</a></li>
+						<li><a href="listviews.html" data-icon="grid">列表</a></li>
+						<li><a href="nav.html" data-icon="search">导航</a></li>
+						<li><a href="forms.html" data-icon="gear" class="ui-btn-active">表单</a></li>
+					</ul>
+				</div>
+			</div>
+			<div data-role="content" data-theme="a">
+				<h2>表单（Forms）</h2>
+				<form action="#" method="get">
+					<div data-role="fieldcontain">
+						<label for="name">文本框：</label>
+						<input type="text" name="name" id="name" value=""  />
+					</div>
+					<div data-role="fieldcontain">
+						<label for="textarea">文本域：</label>
+						<textarea cols="40" rows="20" name="textarea" id="textarea"></textarea>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="search">查询输入：</label>
+						<input type="search" name="password" id="search" value=""  />
+					</div>
+					<div data-role="fieldcontain">
+						<label for="slider2">切换开关：</label>
+						<select name="slider2" id="slider2" data-role="slider">
+							<option value="off">关</option>
+							<option value="on">开</option>
+						</select>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="slider">滑块：</label>
+					 	<input type="range" name="slider" id="slider" value="50" min="0" max="100" data-highlight="true"  />
+					</div>
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup">
+							<legend>复选框：</legend>
+							<input type="checkbox" name="checkbox-1a" id="checkbox-1a" class="custom" />
+							<label for="checkbox-1a">Bootstrap</label>
+							<input type="checkbox" name="checkbox-2a" id="checkbox-2a" class="custom" />
+							<label for="checkbox-2a">jQuery</label>
+							<input type="checkbox" name="checkbox-3a" id="checkbox-3a" class="custom" />
+							<label for="checkbox-3a">jQuery Mobile</label>
+					    </fieldset>
+					</div>
+					<div data-role="fieldcontain">
+						<fieldset data-role="controlgroup" data-type="horizontal">
+					    	<legend>字体风格：</legend>
+					    	<input type="checkbox" name="checkbox-6" id="checkbox-6" class="custom" />
+							<label for="checkbox-6">b</label>
+							<input type="checkbox" name="checkbox-7" id="checkbox-7" class="custom" />
+							<label for="checkbox-7"><em>i</em></label>
+							<input type="checkbox" name="checkbox-8" id="checkbox-8" class="custom" />
+							<label for="checkbox-8">u</label>
+					    </fieldset>
+					</div>
+					<div data-role="fieldcontain">
+					    <fieldset data-role="controlgroup">
+					    	<legend>单选框：</legend>
+							<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
+							<label for="radio-choice-1">Bootstrap</label>
+							<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"  />
+							<label for="radio-choice-2">jQuery</label>
+							<input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3"  />
+							<label for="radio-choice-3">jQuery Mobile</label>
+					    </fieldset>
+					</div>
+					<div data-role="fieldcontain">
+					    <fieldset data-role="controlgroup" data-type="horizontal">
+							<legend>Layout view:</legend>
+							<input type="radio" name="radio-choice-b" id="radio-choice-c" value="on" checked="checked" />
+							<label for="radio-choice-c">Bootstrap</label>
+							<input type="radio" name="radio-choice-b" id="radio-choice-d" value="off" />
+							<label for="radio-choice-d">jQuery</label>
+							<input type="radio" name="radio-choice-b" id="radio-choice-e" value="other" />
+							<label for="radio-choice-e">jQuery Mobile</label>
+					    </fieldset>
+					</div>
+					<div data-role="fieldcontain">
+						<label for="select-choice-a" class="select">下拉菜单：</label>
+						<select name="select-choice-a" id="select-choice-a" data-native-menu="false">
+							<option>选择编程语言</option>
+							<option value="bootstrap">Bootstrap</option>
+							<option value="jqury">jQuery</option>
+							<option value="jquerymobile">jQuery Mobile</option>
+						</select>
+					</div>
+					<div class="ui-body ui-body-b">
+						<fieldset class="ui-grid-a">
+							<div class="ui-block-a"><button type="submit" data-theme="a">取消</button></div>
+							<div class="ui-block-b"><button type="submit" data-theme="d">提交</button></div>
+					    </fieldset>
+					</div>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
