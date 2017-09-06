@@ -1,11 +1,12 @@
 ﻿# 搭建hibernate环境（重点）
 <br>
+
 ## 第一步 导入hibernate的jar包
-因为使用hibernate时候，有日志信息输出，hibernate本身没有日志输出的jar包，导入其他日志的jar包,不要忘记还有mysql驱动的jar包
-<br>
+因为使用hibernate时候，有日志信息输出，hibernate本身没有日志输出的jar包，导入其他日志的jar包,不要忘记还有mysql驱动的jar包<br><br>
+
 ## 第二步 创建实体类
-使用hibernate时候，不需要自己手动创建表，hibernate帮把表创建
-<br>
+使用hibernate时候，不需要自己手动创建表，hibernate帮把表创建<br><br>
+
 ## 第三步 配置实体类和数据库表一一对应关系（映射关系）
 使用配置文件实现映射关系<br>
 （1）创建xml格式的配置文件<br>
@@ -46,6 +47,7 @@
 	</class>
 </hibernate-mapping>
 ```
+<br><br>
 
 ## 第四步 创建hibernate的核心配置文件
 （1）核心配置文件格式xml，但是核心配置文件名称和位置固定的<br>
