@@ -1,13 +1,13 @@
-﻿# 搭建hibernate环境（重点）
+# 1.搭建hibernate环境
 <br>
 
-## 第一步 导入hibernate的jar包
+### 第一步 导入hibernate的jar包
 因为使用hibernate时候，有日志信息输出，hibernate本身没有日志输出的jar包，导入其他日志的jar包,不要忘记还有mysql驱动的jar包<br><br>
 
-## 第二步 创建实体类
+### 第二步 创建实体类
 使用hibernate时候，不需要自己手动创建表，hibernate帮把表创建<br><br>
 
-## 第三步 配置实体类和数据库表一一对应关系（映射关系）
+### 第三步 配置实体类和数据库表一一对应关系（映射关系）
 使用配置文件实现映射关系<br>
 （1）创建xml格式的配置文件<br>
 - 映射配置文件名称和位置没有固定要求<br>
@@ -49,7 +49,7 @@
 ```
 <br><br>
 
-## 第四步 创建hibernate的核心配置文件
+### 第四步 创建hibernate的核心配置文件
 （1）核心配置文件格式xml，但是核心配置文件名称和位置固定的<br>
 - 位置：必须src下面<br>
 - 名称：必须hibernate.cfg.xml<br>
@@ -58,3 +58,30 @@
 第一部分： 配置数据库信息 必须的<br>
 第二部分： 配置hibernate信息 可选的<br>
 第三部分： 把映射文件放到核心配置文件中<br>
+
+<br><br><br>
+
+# 2.实现添加操作
+### 第一步 加载hibernate核心配置文件
+### 第二步 创建SessionFactory对象
+### 第三步 使用SessionFactory创建session对象
+### 第四步 开启事务
+### 第五步 写具体逻辑 crud操作
+### 第六步 提交事务
+### 第七步 关闭资源
+
+<br><br><br>
+
+# 3.Hibernate配置文件详解
+
+### 1 映射配置文件名称和位置没有固定要求
+
+### 2 映射配置文件中，标签name属性值写实体类相关内容
+（1）class标签name属性值实体类全路径<br>
+（2）id标签和property标签name属性值 实体类属性名称<br>
+
+### 3 id标签和property标签，column属性可以省略的
+（1）不写值和name属性值一样的<br>
+
+### 4 property标签type属性，设置生成表字段的类型，自动对应类型
+
