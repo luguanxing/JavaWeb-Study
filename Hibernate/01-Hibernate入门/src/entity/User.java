@@ -1,7 +1,8 @@
 package entity;
 
 public class User {
-	/*hibernate要求实体类有一个属性唯一的*/
+	
+	//hibernate要求实体类有一个属性唯一的
 	private int uid;
 	private String username;
 	private String password;
@@ -32,4 +33,5 @@ public class User {
 	public void setAddress(String address) {
 		this.address = address;
 	}
+	
 }
