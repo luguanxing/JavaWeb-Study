@@ -20,5 +20,4 @@
 
 ```
 
-![img](https://github.com/luguanxing/JavaWeb-Study/blob/master/Hibernate/06-%E5%A4%9A%E5%AF%B9%E5%A4%9A%E6%93%8D%E4%BD%9C/pic.jpg?raw=true)<br>
-效果
+![img](https://github.com/luguanxing/JavaWeb-Study/blob/master/Hibernate/06-%E5%A4%9A%E5%AF%B9%E5%A4%9A%E6%93%8D%E4%BD%9C/pic.jpg?raw=true)
