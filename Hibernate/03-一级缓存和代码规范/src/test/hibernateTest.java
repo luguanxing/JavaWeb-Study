@@ -13,11 +13,13 @@ public class hibernateTest {
 	
 	@Test
 	public void testTx() {
-		//´úÂë¹æ·¶
-		Session session = hibernateUtils.getSession();
-		Transaction ts = session.beginTransaction();
+		//ä»£ç è§„èŒƒ
+		Session session = null;
+		Transaction ts = null;
 		try {
-			//²Ù×÷·½·¨
+			session = hibernateUtils.getSession();
+			ts = session.beginTransaction();
+			//æ“ä½œæ–¹æ³•
 			ts.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -30,15 +32,15 @@ public class hibernateTest {
 	
 	@Test
 	public void testCache() {
-		//ÑéÖ¤Ò»¼¶»º´æµÄ´æÔÚ
+		//éªŒè¯ä¸€çº§ç¼“å­˜çš„å­˜åœ¨
 		Session session = hibernateUtils.getSession();
 		Transaction ts = session.beginTransaction();
 		try {
 			User user1 = session.get(User.class, 1);
 			System.out.println(user1);
-			User user2 = session.get(User.class, 1);	//Á¬ĞøÁ½´Î²éÑ¯ÏàÍ¬user£¬µ«Ö»²éÑ¯ÁËÒ»´ÎÊı¾İ¿â
+			User user2 = session.get(User.class, 1);	//è¿ç»­ä¸¤æ¬¡æŸ¥è¯¢ç›¸åŒuserï¼Œä½†åªæŸ¥è¯¢äº†ä¸€æ¬¡æ•°æ®åº“
 			System.out.println(user2);
-			user1.setPassword("666");	//³Ö¾ÃÌ¬±äÔà(ĞŞ¸Äºó)Ìá½»»á×Ô¶¯¸üĞÂ
+			user1.setPassword("666");	//æŒä¹…æ€å˜è„(ä¿®æ”¹å)æäº¤ä¼šè‡ªåŠ¨æ›´æ–°
 			ts.commit();
 		} catch (Exception e) {
 			e.printStackTrace();
