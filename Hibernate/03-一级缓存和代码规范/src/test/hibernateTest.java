@@ -18,7 +18,7 @@ public class hibernateTest {
 		Transaction ts = null;
 		try {
 			session = hibernateUtils.getSession();
-			ts = session.beginTransaction();ts.commit();
+			ts = session.beginTransaction();
 			//操作方法
 			ts.commit();
 		} catch (Exception e) {
