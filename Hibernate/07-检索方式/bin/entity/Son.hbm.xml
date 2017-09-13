@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<!-- 1 配置类和表对应 
+		class标签
+		name属性：实体类全路径
+		table属性：数据库表名称
+	-->
+	<class name="entity.Son" table="t_son">
+		<id name="son_id" column="son_id">
+			<generator class="native"></generator>
+		</id>
+		<property name="son_name" column="son_name"></property>
+		<property name="son_gender" column="son_gender"></property>
+		<property name="son_phone" column="son_phone"></property>
+		
+		<!--
+			表示儿子所属父亲
+			name属性：在儿子类使用father对象表示属主父亲
+			class属性：儿子类全路径
+			column属性：外键名称
+		-->
+		<many-to-one name="father" class="entity.Father" column="fatherid"></many-to-one>
+	</class>
+</hibernate-mapping>
+

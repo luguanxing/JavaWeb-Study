@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<!-- 1 配置类和表对应 
+		class标签
+		name属性：实体类全路径
+		table属性：数据库表名称
+	-->
+	<class name="entity.Father" table="t_father">
+		<id name="fid" column="fid">
+			<generator class="native"></generator>
+		</id>
+		<property name="fatherName" column="fatherName"></property>
+		<property name="fatherLevel" column="fatherLevel"></property>
+		<property name="fatherSource" column="fatherSource"></property>
+		<property name="fatherPhone" column="fatherPhone"></property>
+		<property name="fatherMobile" column="fatherMobile"></property>
+		
+		<!--
+			在父亲映射文件中，表示所有儿子
+			使用set标签表示所有儿子
+			set标签里面有name属性：父亲实体类里面表示儿子的set集合名称
+			inverse属性默认值：false不放弃关系维护	true表示放弃关系维护
+		-->
+		<set name="sons" cascade="save-update, delete" inverse="true">
+			<!-- 
+				一对多建表，有外键
+				hibernate机制：双向维护外键，在一和多那一方都配置外键	
+				column属性值：外键名称
+			-->
+			<key column="fatherid"></key>
+			<!--
+				 客户所有的联系人，class里面写从属类儿子实体类全路径
+			-->
+			<one-to-many class="entity.Son"/>
+		</set>
+	</class>
+</hibernate-mapping>
+
+
+
+
+
