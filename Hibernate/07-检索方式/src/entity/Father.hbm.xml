@@ -24,7 +24,7 @@
 			set标签里面有name属性：父亲实体类里面表示儿子的set集合名称
 			inverse属性默认值：false不放弃关系维护	true表示放弃关系维护
 		-->
-		<set name="sons" cascade="save-update, delete" inverse="true">
+		<set name="sons" cascade="save-update, delete" inverse="true" batch-size="10">
 			<!-- 
 				一对多建表，有外键
 				hibernate机制：双向维护外键，在一和多那一方都配置外键	
