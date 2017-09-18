@@ -1,9 +1,12 @@
 # 执行过程和配置
 
-### 过程
+### 执行过程
+![img](https://github.com/luguanxing/JavaWeb-Study/blob/master/Struts2/02-%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B%E5%92%8C%E9%85%8D%E7%BD%AE/pic.jpg?raw=true)
+
+<br><br>
  
 
-### 配置
+### 相关配置
 ```
 过滤器在服务器启动时候创建，创建过滤器时候执行init方法:
 - 在init方法中主要加载配置文件
