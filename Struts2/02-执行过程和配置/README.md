@@ -1,0 +1,74 @@
+# 执行过程和配置
+
+### 过程
+ 
+
+### 配置
+```
+过滤器在服务器启动时候创建，创建过滤器时候执行init方法:
+- 在init方法中主要加载配置文件
+- 包含自己创建的配置文件和struts2自带配置文件
+	struts.xml
+	web.xml
+Struts2的核心配置文件:
+1 名称和位置固定的
+2 在配置文件中主要三个标签 package、action、result，标签里面的属性
+```
+
+
+##### 标签package
+```
+1 类似于代码包，区别不同的action，要配置action，必须首先写package标签，在package里面才能 配置action
+2 package标签属性
+（1）name属性
+- name属性值根功能本身没有关系的，
+- 在一个配置文件中可以写多个package标签，name属性值不能相同的
+（2）extends属性
+- 属性值固定的，struts-default
+- 写了这个属性之后，在package里面配置的类具有action功能
+（3）namespace属性
+- namespace属性值和action标签里面的name属性值构成访问路径
+```
+
+##### 标签action
+```
+1 action标签配置action访问路径
+2 action标签属性
+（1）name属性
+- namespace属性值和action标签里面的name属性值构成访问路径
+- 在package标签里面写多个action标签，但是action的name属性值不能相同的
+（2）class属性
+- action全路径
+（3）method属性
+- 比如在action里面默认执行的方法execute方法，但是在action里面写其他的方法
+- 让action里面多个方法执行，使用method进行配置
+```
+
+##### 标签result
+```
+1 根据action的方法返回值，配置到不同的路径里面
+2 result标签属性
+（1）name属性
+- 和方法返回值一样
+（2）type属性
+- 配置如何到路径中（转发或者重定向）
+- type属性默认值 做转发操作
+```
+
+##### Struts2常量配置
+```
+1 struts2框架，帮我们实现一部分功能，struts2里面有常量，在常量里面封装一部分功能
+2 struts2默认的常量位置（记住）
+3 修改struts2默认常量值
+（1）常用的方式
+- 在struts.xml中进行配置
+（2）还有两种方式（了解）
+- 在src下面创建 struts.properties，进行修改
+- 在web.xml进行配置
+4 介绍最常用常量（明天演示）
+（1）表单提交数据到action里面，在action可以获取表单提交数据，
+（2）表单提交数据有中文，有乱码问题，解决：
+- post提交直接设置编码
+- get提交做编码转换
+（3）如果在action获取表单通过post方式提交中文，中文乱码问题帮解决了，不需要自己处理问题
+```
