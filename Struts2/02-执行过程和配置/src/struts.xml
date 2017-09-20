@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<package name="helloDemo" extends="struts-default" namespace="/">
+		<!-- name: 访问名称 -->
+		<action name="hello" class="action.HelloAction">
+			<!-- 配置根据方法的返回值跳转到不同到页面，访问/hello页面得到，这里返回"ok"匹配  -->
+			<result name="ok">/hello.jsp</result>
+		</action>
+		<action name="hello2" class="action.HelloAction2">
+			<!-- 配置根据方法的返回值跳转到不同到页面，访问/hello2页面得到，这里返回SUCCESS匹配 -->
+			<result name="ok">/hello.jsp</result>
+		</action>
+		<action name="hello3" class="action.HelloAction3">
+			<!-- 配置根据方法的返回值跳转到不同到页面，访问/hello3页面得到，这里返回NONE不匹配结果 -->
+		</action>
+		
+		
+		
+		<!-- 执行add或update方法，访问/helloadd或/helloupdate页面得到，均返回NONE不匹配结果，缺点是不同方法需要逐个配置 -->
+		<action name="helloadd" class="action.HelloMethod" method="add"></action>
+		<action name="helloupdate" class="action.HelloMethod" method="update"></action>
+		
+		<!-- 执行add或update方法，访问/hello2add或/hello2update页面得到，使用通配符 -->
+		<action name="hello2*" class="action.HelloMethod2" method="{1}"></action>
+		
+	</package>
+	
+	<!-- 引入的页面，用于分模块开发，访问/hi页面得到 -->
+	<include file="xml/hello.xml"></include>
+	
+</struts>

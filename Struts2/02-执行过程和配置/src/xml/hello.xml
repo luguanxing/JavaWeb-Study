@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<!-- 被引入的页面 -->
+	<package name="helloDemo2" extends="struts-default" namespace="/">
+		<!-- name: 访问名称 -->
+		<action name="hi" class="action.HelloAction">
+			<!-- 配置根据方法的返回值跳转到不同到页面 -->
+			<result name="ok">/hello.jsp</result>
+		</action>
+	</package>
+	
+</struts>
