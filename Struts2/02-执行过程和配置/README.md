@@ -19,7 +19,7 @@ Struts2的核心配置文件:
 ```
 
 
-##### 标签package
+##### 1.标签package配置
 ```
 1 类似于代码包，区别不同的action，要配置action，必须首先写package标签，在package里面才能 配置action
 2 package标签属性
@@ -33,7 +33,7 @@ Struts2的核心配置文件:
 - namespace属性值和action标签里面的name属性值构成访问路径
 ```
 
-##### 标签action
+##### 2.标签action配置
 ```
 1 action标签配置action访问路径
 2 action标签属性
@@ -47,7 +47,7 @@ Struts2的核心配置文件:
 - 让action里面多个方法执行，使用method进行配置
 ```
 
-##### 标签result
+##### 3.标签result配置
 ```
 1 根据action的方法返回值，配置到不同的路径里面
 2 result标签属性
@@ -58,7 +58,7 @@ Struts2的核心配置文件:
 - type属性默认值 做转发操作
 ```
 
-##### Struts2常量配置
+##### 4.truts2常量配置
 ```
 1 struts2框架，帮我们实现一部分功能，struts2里面有常量，在常量里面封装一部分功能
 2 struts2默认的常量位置（记住）
