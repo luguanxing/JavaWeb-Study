@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<package name="PageTest" extends="struts-default" namespace="/">
+	
+		<!-- 全局结果页面配置，当name和页面url一样时可自动配置，不用手写 -->
+		<global-results>
+			<result name="welcome">/welcome.jsp</result>
+		</global-results>
+	
+		<!-- 测试全局结果页面配置 -->
+		<action name="hello" class="action.helloAction"></action>
+		<action name="hi" class="action.hiAction"></action>
+		
+		<!-- 转发 和 重定向-->
+		<action name="book1" class="action.bookAction1">
+			<result name="success" type="dispatcher">/book.jsp</result>
+		</action>
+		<action name="book2" class="action.bookAction1">
+			<result name="success" type="redirect">/book.jsp</result>
+		</action>
+		
+	</package>
+	
+	
+	<package name="FormTest" extends="struts-default" namespace="/">
+	
+		<!-- 获取表单数据-->
+		<action name="form" class="action.formAction"></action>
+		
+	</package>
+	
+</struts>
