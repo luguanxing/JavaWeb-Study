@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<package name="FormTest" extends="struts-default" namespace="/">
+	
+		<!-- 表单数据->属性封装-->
+		<action name="form1" class="data.propertyAction"></action>
+		
+		<!-- 表单数据->模型驱动封装-->
+		<action name="form2" class="data.modelDrivenAction"></action>
+		
+		<!-- 表单数据->表达式封装-->
+		<action name="form3" class="data.expressionAction"></action>
+		
+	</package>
+	
+</struts>
