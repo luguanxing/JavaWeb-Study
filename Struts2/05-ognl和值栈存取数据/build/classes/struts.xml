@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+	<package name="ValueStackDemo" extends="struts-default" namespace="/">
+		<!-- 使用ognl标签 -->
+		<action name="ValueStack" class="action.ValueStackAction">
+			<result name="success">/valuestack.jsp</result>
+		</action>
+		<!-- 使用foreach标签 + el表达式 -->
+		<action name="ValueStack2" class="action.ValueStackAction">
+			<result name="success">/valuestack_el.jsp</result>
+		</action>
+		
+		<!-- 使用ognl# -->
+		<action name="ognl" class="action.ognlAction">
+			<result name="success">/context.jsp</result>
+		</action>		
+		<!-- 使用ognl% -->
+		<action name="ognl2" class="action.ognlAction">
+			<result name="success">/form.jsp</result>
+		</action>		
+	</package>
+	
+</struts>
