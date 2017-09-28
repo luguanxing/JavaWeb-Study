@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 有参构造注入属性 -->
+	<bean id="entity1" class="property.enityWithConstructor">
+		<!-- 设置初始化参数 -->
+		<constructor-arg name="username" value="哈哈哈"></constructor-arg>
+	</bean>
+
+	<!-- 无参构造注入属性 -->
+	<bean id="entity2" class="property.enityWithoutConstructor">
+		<!-- 设置属性 -->
+		<property name="username" value="蛤蛤蛤"></property>
+	</bean>
+	
+	<!-- 注入类型对象 -->
+	<bean id="_userDao" class="property.UserDao"></bean>
+	<bean id="_userService" class="property.UserService">
+		<!-- 注入对象,name为属性,ref为注入的对象 -->
+		<property name="userDao" ref="_userDao"></property>
+		<!-- 注入arr-->
+		<property name="strings">
+			<list>
+				<value>AA</value>
+				<value>BB</value>
+				<value>CC</value>
+			</list>
+		</property>
+		<!-- 注入list-->
+		<property name="list">
+			<list>
+				<value>肥肥</value>
+				<value>猪猪</value>
+				<value>牛牛</value>
+			</list>
+		</property>
+		<!-- 注入map-->
+		<property name="map">
+			<map>
+				<entry key="aa" value="AA"></entry>
+				<entry key="bb" value="BB"></entry>
+				<entry key="cc" value="CC"></entry>
+			</map>
+		</property>
+		<!-- 注入properties-->
+		<property name="properties">
+			<props>
+				<prop key="driverclass">com.mysql.jdbc.Driver</prop>
+				<prop key="username">username</prop>
+				<prop key="password">password</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans>
