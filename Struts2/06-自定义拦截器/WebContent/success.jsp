@@ -4,9 +4,9 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>拦截器登录</title>
+		<title>登录成功</title>
 	</head>
 	<body>
-		<h1>登录成功, ${sessionScope.username }</h1>
+		<h1>${user.username}登录成功</h1>
 	</body>
 </html>

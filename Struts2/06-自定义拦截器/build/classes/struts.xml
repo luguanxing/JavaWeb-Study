@@ -4,30 +4,45 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 <struts>
 
-	<package name="LoginDemo" extends="struts-default" namespace="/">
-		<!-- 声明拦截器 -->
+	<package name="TagDemo" extends="struts-default" namespace="/">
+
 		<interceptors>
-			<interceptor name="loginInterceptor" class="interceptor.LoginInterceptor"></interceptor>
+			<!-- 声明拦截器 -->
+			<interceptor name="PrivilegeInterceptor" class="interceptor.PrivilegeInterceptor" />
+			
+			<interceptor-stack name="myStack">
+				<!-- 需要重新配置默认拦截器，否则默认拦截器不执行 -->
+				<interceptor-ref name="defaultStack" />
+				<interceptor-ref name="PrivilegeInterceptor" />
+			</interceptor-stack>
+			
 		</interceptors>
-	
-		<action name="login" class="action.LoginAction">
 		
-			<!-- 使用拦截器 -->
-			<interceptor-ref name="loginInterceptor">
-				<!-- 不拦截action的某些方法,忽略方法excludeMethods,多个方法用逗号分割 -->
-				<param name="excludeMethods">execute</param>
-				<!-- action的其它方法(使用了通配符等方法)执行前都进行拦截 -->
-			</interceptor-ref>
-			
-			<!-- 需要重新配置默认拦截器，否则默认拦截器不执行 -->
-			<interceptor-ref name="defaultStack"></interceptor-ref>
-			
-			<result name="success">/index.jsp</result>
-			<result name="failed">/login.jsp</result>
-			
+		
+		<!-- 使用拦截器 -->
+		<!-- <interceptor-ref name="xxx"> -->
+			<!-- 不拦截XXXaction的某些YYY方法,忽略方法excludeMethods,多个方法用逗号分割 -->
+			<!-- <param name="excludeMethods">YYY</param> -->
+			<!-- action的其它方法(使用了通配符等方法)执行前都进行拦截 -->
+		<!-- </interceptor-ref> -->
+		
+		
+		<!-- 登录操作 -->
+		<action name="login" class="action.LoginAction">
+			<result>/main.jsp</result>
+			<result name="success">/success.jsp</result>
+			<result name="input">/login.jsp</result>
 		</action>
 		
 		
+		<!-- 权限操作 -->
+		<action name="book_*" class="action.BookAction" method="{1}">
+			<result name="success">/success.jsp</result>
+			<result name="input">/login.jsp</result>
+			<result name="login">/login.jsp</result>
+			<!-- 使用权限拦截器 -->
+			<interceptor-ref name="myStack" />
+		</action>
 	</package>
 	
 </struts>

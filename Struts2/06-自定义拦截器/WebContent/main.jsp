@@ -4,14 +4,10 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>登录</title>
+		<title>需要登录的操作页面</title>
 	</head>
 	<body>
-		<span style="color:red">${msg} </span>
-		<form action="${pageContext.request.contextPath }/login.action" method="post">
-			<input name="username" type="text"/><br/>
-			<input name="password" type="text"/><br/>
-			<input type="submit" value="登录"/>
-		</form>
+		<a href="${pageContext.request.contextPath}/book_add">add</a><br/>
+		<a href="${pageContext.request.contextPath}/book_del">del</a><br/>
 	</body>
 </html>
