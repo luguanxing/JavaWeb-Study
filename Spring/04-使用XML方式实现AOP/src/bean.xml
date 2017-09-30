@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd"> <!-- bean definitions here -->
+
+	<!-- 配置对象 -->
+	<bean id="user" class="aop.User"></bean>
+	<bean id="userExt" class="aop.UserExt"></bean>
+	
+	<!-- 配置aop操作 -->
+	<aop:config>
+		<!-- 配置切入点 -->
+		<aop:pointcut expression="execution(* aop.User.add(..))" id="mypointcut"/>
+		<!-- 配置切面，用于增强切入点，指定增强类 -->
+		<aop:aspect ref="userExt">
+			<!-- 前置增强，指定增强类的方法 -->
+			<aop:before method="add_before" pointcut-ref="mypointcut"/>
+			<!-- 后置增强 -->
+			<aop:after method="add_after" pointcut-ref="mypointcut"/>
+			<!-- 环绕增强 -->
+			<aop:around method="add_around" pointcut-ref="mypointcut"/>
+		</aop:aspect>
+	</aop:config>
+
+</beans>
