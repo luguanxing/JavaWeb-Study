@@ -1,0 +1,49 @@
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 写sql语句 -->
+<mapper namespace="mapper.UserMapper">
+
+	<!-- 通过id查询用户  -->
+	<select id="findById" parameterType="Integer" resultType="User">
+		SELECT * FROM user WHERE id = #{id}
+	</select>
+
+	<!--
+		通过username模糊查询
+		#{}=>'x'用于普通占位符,  ${value}=>x用于字符串拼接,只能用value做名
+		SELECT * FROM user WHERE username LIKE "%${value}%"
+	-->
+	<select id="findByUsername" parameterType="String" resultType="User">
+		SELECT * FROM user WHERE username LIKE "%"#{username}"%"
+	</select>
+
+	<!-- 添加用户,#{username}相当于从User调用username的getter方法  -->
+	<insert id="addUser" parameterType="pojo.User">
+		INSERT INTO user (username, birthday, address, sex)
+		VALUES (#{username}, #{birthday}, #{address}, #{sex})
+	</insert>
+	
+	<!-- 添加用户,并且返回id,mysql先保存再生成id  -->
+	<insert id="addUserReturnId" parameterType="User">
+		<selectKey keyProperty="id" resultType="Integer" order="AFTER">
+			SELECT LAST_INSERT_ID();
+		</selectKey>
+		INSERT INTO user (username, birthday, address, sex)
+		VALUES (#{username}, #{birthday}, #{address}, #{sex})
+	</insert>
+
+	<!-- 更新用户  -->
+	<update id="updateUser" parameterType="User">
+		UPDATE user
+		SET username = #{username}, birthday = #{birthday}, address = #{address}, sex = #{sex}
+		WHERE id = #{id}
+	</update>
+
+	<!-- 删除用户  -->
+	<delete id="deleteUser" parameterType="Integer">
+		DELETE FROM user WHERE id = #{id}
+	</delete>
+
+</mapper>
