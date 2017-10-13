@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+	<!-- 键值对，用于简化书写 -->
+	<properties resource="jdbc.properties" />
+	
+	<!-- 别名,用于化简映射文件中的类全路径名,可用package扫描包及其子包 -->
+	<typeAliases>
+		<!-- <typeAlias type="pojo.User" alias="User"/> -->
+		<package name="pojo"/>
+	</typeAliases>
+
+	<!-- 和spring整合后 environments配置将废除 -->
+    <environments default="development">  
+        <environment id="development">  
+        	<!-- 使用jdbc事务管理 -->
+            <transactionManager type="JDBC"/>  
+	        <!-- 数据库连接池 -->
+            <dataSource type="POOLED">  
+				<property name="driver" value="${jdbc.driver}"/>
+				<property name="url" value="${jdbc.url}"/>
+				<property name="username" value="${jdbc.username}"/>
+				<property name="password" value="${jdbc.password}"/>
+			</dataSource>
+		</environment>
+	</environments>
+	
+	<!--
+		映射文件, 用于指定写sql语句的文件配置:resouce(位置任意),
+	 	class(要求Mapper接口和sql配置文件在一起且名称相同), url用于盘符(较少用),
+	 	也可以用package扫描包
+	 -->
+	<mappers>
+		<!-- <mapper resource="sqlmap/User.xml"/> -->
+		<!-- <mapper class="mapper.UserMapper"/> -->
+		<package name="mapper"/>
+	</mappers>
+
+</configuration>
