@@ -1,0 +1,27 @@
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 使用ResultMap写sql语句 -->
+<mapper namespace="mapper.OrdersMapper">
+
+	<!--
+		自动映射要求数据库表字段和pojo对应否则无法映射
+		<select id="selectOrdersList" resultType="Orders">
+			SELECT id, user_id, number, createtime, note FROM orders
+		</select>
+	-->
+
+	<!-- 映射 -->
+	<resultMap type="Orders" id="maptest">
+		<!-- 数据库字段column,实体属性property,javaType和jdbcType可不屑自动推断 -->
+		<!-- <id column="id" property="id"/> -->
+		<!-- 可以只写字段和属性不一样的 -->
+		<result column="user_id" property="userId"/>
+		<!-- <result column="number" property="number"/> -->
+	</resultMap>
+	<select id="selectOrdersList" resultMap="maptest">
+		SELECT id, user_id, number, createtime, note FROM orders
+	</select>
+  
+</mapper>

@@ -1,0 +1,90 @@
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 写sql语句 -->
+<mapper namespace="mapper.UserMapper">
+
+	<!-- sql标签用于化简提取sql片段  -->
+	<sql id="selectAll">
+		select * from user
+	</sql>
+
+	<!-- 通过id查询用户  -->
+	<select id="findById" parameterType="Integer" resultType="User">
+		SELECT * FROM user WHERE id = #{id}
+	</select>
+	
+	
+	
+	<!-- 使用queryvo进行用户名模糊查询 -->
+	<select id="findUserByQueryVo" parameterType="QueryVo" resultType="User">
+		SELECT * FROM user WHERE username LIKE "%"#{user.username}"%"
+	</select>
+	
+	<!-- 根据性别和名字查询用户 -->
+	<!-- 
+		  include用于提取sql片段
+		  if 用于拼接关键字
+		  where 用于去掉第一个前AND
+	-->
+	<select id="selectUserBySexAndUsername" parameterType="User" resultType="User">
+		<include refid="selectAll" />
+		<where>
+			<if test="sex != null and sex != ''">
+				AND sex = #{sex} 
+			</if>
+			<if test="username != null and username != ''">
+				AND username = #{username} 
+			</if>
+		</where>
+	</select>
+	
+	
+	
+	<!-- 不写parameterType尤其自动推断 -->
+	<!-- 使用Integer[]查多个ID，注意基本类型collection="array" -->
+	<select id="selectUserByIds" resultType="User">
+		<include refid="selectAll" />
+		<!-- 拼接多个值(1,2,3) -->
+		<where>
+			<foreach collection="array" item="id" separator="," open="id IN (" close=")">
+				#{id}
+			</foreach>
+		</where>
+	</select>
+	
+	<!-- 使用List查多个ID，注意基本类型collection="list" -->
+	<select id="selectUserByIdsList" resultType="User">
+		<include refid="selectAll" />
+		<!-- 拼接多个值(1,2,3) -->
+		<where>
+			<foreach collection="list" item="id" separator="," open="id IN (" close=")">
+				#{id}
+			</foreach>
+		</where>
+	</select>
+	
+	<!-- 使用QueryVo的内置数组查多个ID -->
+	<select id="selectUserByVoIds" parameterType="QueryVo" resultType="User">
+		<include refid="selectAll" />
+		<!-- 拼接多个值(1,2,3) -->
+		<where>
+			<foreach collection="ids" item="id" separator="," open="id IN (" close=")">
+				#{id}
+			</foreach>
+		</where>
+	</select>
+	
+	<!-- 使用QueryVo的内置List查多个ID -->
+	<select id="selectUserByVoIdsList" parameterType="QueryVo" resultType="User">
+		<include refid="selectAll" />
+		<!-- 拼接多个值(1,2,3) -->
+		<where>
+			<foreach collection="idsList" item="id" separator="," open="id IN (" close=")">
+				#{id}
+			</foreach>
+		</where>
+	</select>
+
+</mapper>
