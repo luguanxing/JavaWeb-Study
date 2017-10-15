@@ -1,0 +1,44 @@
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 使用ResultMap写sql语句 -->
+<mapper namespace="mapper.OrdersMapper">
+	
+	<!-- 以订单为中心一对一关联查询，但对象嵌套映射时所有表项需要手动关联，不能省略 -->
+	<resultMap type="Orders" id="orderOneToOne">
+		<id column="oid" property="id"/>
+		<result column="number" property="number"/>
+		<result column="createtime" property="createtime"/>
+		<!-- 一对一映射对象 -->
+		<association property="user" javaType="User">
+			<id column="uid" property="id"/>
+			<result column="username" property="username"/>
+		</association>
+	</resultMap>
+	<select id="selectOrders" resultMap="orderOneToOne">
+		SELECT o.id AS oid, o.number, o.createtime, u.id AS uid, u.username
+		FROM orders o 
+		LEFT JOIN user u 
+		ON o.user_id = u.id
+	</select>
+	
+	<!-- 以用户为中心一对多关联查询 -->
+	<resultMap type="User" id="userOneToMany">
+		<id column="uid" property="id"/>
+		<result column="username" property="username"/>
+		<!-- 一对多映射对象，指定List集合对象的泛型 -->
+		<collection property="ordersList" ofType="Orders">
+			<id column="oid" property="id"/>
+			<result column="number" property="number"/>
+			<result column="createtime" property="createtime"/>
+		</collection>
+	</resultMap>
+	<select id="selectUsers" resultMap="userOneToMany">
+		SELECT o.id AS oid, o.number, o.createtime, u.id AS uid, u.username
+		FROM orders o 
+		RIGHT JOIN USER u 
+		ON o.user_id = u.id
+	</select>
+  
+</mapper>
