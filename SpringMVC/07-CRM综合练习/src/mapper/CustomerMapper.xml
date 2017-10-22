@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.CustomerMapper">
+
+	<!-- 查符合条件的总条数 -->
+	<select id="customerCountByQueryVo" parameterType="QueryVo" resultType="Integer">
+		SELECT COUNT(1) FROM customer
+		<where>
+			<if test="custName != null and custName != ''">
+				AND cust_name LIKE "%"#{custName}"%"
+			</if>
+			<if test="custSource != null and custSource != ''">
+				AND cust_source = #{custSource}
+			</if>
+			<if test="custIndustry != null and custIndustry != ''">
+				AND cust_industry = #{custIndustry}
+			</if>
+			<if test="custLevel != null and custLevel != ''">
+				AND cust_level = #{custLevel}
+			</if>
+		</where>
+	</select>
+
+	<!-- 查符合条件的数据结果集 -->
+	<select id="selectCustomerListByQueryVo" parameterType="QueryVo" resultType="Customer">
+		SELECT * FROM customer
+		<where>
+			<if test="custName != null and custName != ''">
+				AND cust_name LIKE "%"#{custName}"%"
+			</if>
+			<if test="custSource != null and custSource != ''">
+				AND cust_source = #{custSource}
+			</if>
+			<if test="custIndustry != null and custIndustry != ''">
+				AND cust_industry = #{custIndustry}
+			</if>
+			<if test="custLevel != null and custLevel != ''">
+				AND cust_level = #{custLevel}
+			</if>
+		</where>
+		LIMIT #{startRow}, #{size}
+	</select>
+	
+	<!-- 通过ID查询客户 -->
+	<select id="selectCustomerById" parameterType="Integer" resultType="Customer">
+		SELECT * FROM customer
+		<where>
+			cust_id = #{id}
+		</where>
+	</select>
+	
+	<!-- 通过ID修改客户 -->
+	<update id="editCustomerById" parameterType="Customer">
+		UPDATE customer
+		<set>
+			<if test="cust_name != null">
+				cust_name = #{cust_name},
+			</if>
+			<if test="cust_linkman != null">
+				cust_linkman = #{cust_linkman},
+			</if>
+		</set>
+		<where>
+			cust_id = #{cust_id}
+		</where>
+	</update>
+	
+	<!-- 通过ID删除客户 -->
+	<delete id="deleteCustomerById" parameterType="Integer">
+		DELETE FROM customer WHERE cust_id = #{id}
+	</delete>
+
+</mapper>
