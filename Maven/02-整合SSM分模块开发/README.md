@@ -39,6 +39,7 @@
 ```
 1.使用maven创建项目时，注意要手动添加maven的library(web项目要添加tomcat等)，否则可能有LifecycleException
 2.使用servlet，jsp-api，jstl一般选用最新的，mvnrepository不用带TM的，webmodule选3.0，否则可能要LifecycleException
+3.因网络原因下载了不完整的jar包导致底层出现java.util.zip.ZipException: invalid LOC header (bad signature)，上层出现LifecycleException
 
 测试可行代码如下
 <!-- 添加Servlet支持 -->
