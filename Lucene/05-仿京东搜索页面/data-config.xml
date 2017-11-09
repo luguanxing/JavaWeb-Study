@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataConfig>
+
+	<dataSource type="JdbcDataSource"
+		driver="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://127.0.0.1:3306/lucene_test?serverTimezone=UTC"
+		user="root"
+		password="root"/>
+	
+	<document>
+		<entity name="product" query="SELECT pid, pname, shop_price, pimage, pdesc FROM product">
+			<field column="pid" name="id"/>
+			<field column="pname" name="product_name"/>
+			<field column="shop_price" name="product_price"/>
+			<field column="pimage" name="product_imgae"/>
+			<field column="pdesc" name="product_description"/>
+		</entity>
+	</document>
+	
+</dataConfig>
