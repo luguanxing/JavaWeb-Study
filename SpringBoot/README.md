@@ -4,6 +4,7 @@
 ![img](https://github.com/luguanxing/JavaWeb-Study/blob/master/SpringBoot/01-%E4%BD%BF%E7%94%A8java%E9%85%8D%E7%BD%AEioc/ioc.jpg?raw=true)
 
 ### 02-读取配置文件和定义数据源
+@PropertySource(value = { "classpath:jdbc.properties" }, ignoreResourceNotFound = true) // 读数据源，可以用逗号加载多个
 <br><br>
 
 ### 03-springboot入门
