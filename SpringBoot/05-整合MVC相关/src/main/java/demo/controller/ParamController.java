@@ -11,7 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class ParamController {
 
 	@RequestMapping("/{id}")
-	public ModelAndView showParam(@PathVariable("id") Integer id) {
+	public ModelAndView showParamUrl(@PathVariable("id") Integer id) {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("id", id);
 		mav.setViewName("idPage");
