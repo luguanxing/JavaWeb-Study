@@ -88,3 +88,16 @@ springboot会自动配置容器对象
 		需要继承SpringBootServletInitializer，然后重写configure，将SpringBoot入口类设置进去
 	注意springboot没有web-inf.xml而是另外有其它的生成类文件
 ```
+<br><br>
+
+### 05-整合MVC相关
+```
+安装STS插件便于开发
+使用FreeMarker
+配置MVC相关
+	@RequestMapping配置URL映射
+	@Controller
+	@RestController简化方法
+	@PathVariable获取URL参数
+	@RequestParam获取参数
+```
