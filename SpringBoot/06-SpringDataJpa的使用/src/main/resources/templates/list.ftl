@@ -6,6 +6,11 @@
 	</head>
 	<body>
 		<a href="/bookAdd.html">添加</a>
+		<form method="post" action="/book/list2">
+			图书名称：<input type="text" name="name" />&nbsp;
+			图书作者：<input type="text" name="author" />&nbsp;
+			<input type="submit" value="搜索"/>
+		</form>
 		<table>
 			<tr>
 				<th>编号</th>
